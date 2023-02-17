@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="fc08dc1c-941b-4030-8119-bf95a88f5e15" Name="Windows 10 Update Target" Description="VGhpcyBzY3JpcHQgd2FzIGNyZWF0ZWQgdG8gcHJldmVudCBXaW5kb3dzIDEwIHVwZGF0aW5nIHRvIFdpbmRvd3MgMTEgYnkgcmVzdHJpY3RpbmcgZmVhdHVyZSB2ZXJzaW9uIHZpYSB0aGUgcmVnaXN0cnkuDQoNClRoZSBzY3JpcHQgd2lsbCBhdXRvbWF0aWNhbGx5IGV4aXQgaWYgdGhlIGRlc3RpbmF0aW9uIG1hY2hpbmUocykgYXJlIG5vdCBydW5uaW5nIFdpbmRvd3MgMTAgYW5kIG9wdGlvbmFsbHkgYWxsb3dzIHRvIGZvcmNlIGEgcmVib290Lg==" Version="2.18.1.8" MinRequiredVersion="2.18.1.8" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="3.0">
+  <Object ID="{8f2b5175-6346-4b42-8fe1-901f805c8539}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;TargetVersion&quot; Label=&quot;Target Version&quot; ParameterType=&quot;string&quot; Value=&quot;21H1&quot; /&gt;&lt;Parameter ParameterName=&quot;ForceReboot&quot; Label=&quot;Force Reboot&quot; ParameterType=&quot;number&quot; Value=&quot;0&quot; /&gt;&lt;Parameter ParameterName=&quot;RebootAfterSeconds&quot; Label=&quot;Reboot After (Seconds)&quot; ParameterType=&quot;number&quot; Value=&quot;300&quot; /&gt;&lt;/Parameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" />
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.18.1.8" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>1465,6629</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="1465,6629" MinRequiredVersion="2.18.1.8" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:IfObject CaseSensitive_Item="{x:Null}" CaseSensitive_ItemProp="{x:Null}" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" VerboseOutput_Item="{x:Null}" VerboseOutput_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" Condition="greater than" Condition_DisplayArg="greater than" DisplayName="If" sap:VirtualizedContainerService.HintSize="1429,970" MinRequiredVersion="2.18.1.8" Moniker="c14c487b-0f38-49db-9a1f-8683f3dc203d" Result="[IfObject_Result_5]" ResultString="[IfObject_ResultString_5]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="0" Value_Type="x:Double" Variable="[ForceReboot]" Variable_DisplayArg="Input Parameters.Force Reboot" Variable_Type="x:Double" VerboseOutput="False" VerboseOutput_DisplayArg="" m_bTextLinkChange="False">
+          <p:IfObject.IfOption>
+            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="543,697" Name="SequenceActivity">
+              <p:SequenceActivity.Activities>
+                <p:IfObject CaseSensitive_Item="{x:Null}" CaseSensitive_ItemProp="{x:Null}" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" VerboseOutput_Item="{x:Null}" VerboseOutput_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" Condition="less than" Condition_DisplayArg="less than" DisplayName="If" sap:VirtualizedContainerService.HintSize="505,547" MinRequiredVersion="2.18.1.8" Moniker="815707f9-89e1-4383-9e81-026faf84bc14" Result="[IfObject_Result_6]" ResultString="[IfObject_ResultString_6]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="300" Value_Type="x:Double" Variable="[RebootAfterSeconds]" Variable_DisplayArg="Input Parameters.Reboot After (Seconds)" Variable_Type="x:Double" VerboseOutput="False" VerboseOutput_DisplayArg="" m_bTextLinkChange="False">
+                  <p:IfObject.IfOption>
+                    <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="473,274" Name="SequenceActivity">
+                      <p:SequenceActivity.Activities>
+                        <p:StopPolicy CompletionResult_Item="{x:Null}" CompletionResult_ItemProp="{x:Null}" StopReason_Item="{x:Null}" StopReason_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" CompletionResult="2" CompletionResult_DisplayArg="2" DisplayName="Stop Policy" sap:VirtualizedContainerService.HintSize="435,124" MinRequiredVersion="2.16.1.1" Moniker="adc02e32-b2a8-49c2-9c1f-957d6406c22e" Result="[StopPolicy_Result_2]" ResultString="[StopPolicy_ResultString_2]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" StopReason="Reboot time must be 300 seconds or more" StopReason_DisplayArg="Reboot time must be 300 seconds or more" TypeName="StopPolicy" m_bTextLinkChange="False" />
+                      </p:SequenceActivity.Activities>
+                      <p:SequenceActivity.Variables>
+                        <Variable x:TypeArguments="x:Double" Name="StopPolicy_Result_2" />
+                        <Variable x:TypeArguments="x:String" Name="StopPolicy_ResultString_2" />
+                      </p:SequenceActivity.Variables>
+                    </p:SequenceActivity>
+                  </p:IfObject.IfOption>
+                  <p:IfObject.Value>
+                    <InArgument x:TypeArguments="x:Object">
+                      <p:ObjectLiteral>
+                        <p:ObjectLiteral.Value>
+                          <x:Double>300</x:Double>
+                        </p:ObjectLiteral.Value>
+                      </p:ObjectLiteral>
+                    </InArgument>
+                  </p:IfObject.Value>
+                </p:IfObject>
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable x:TypeArguments="x:Double" Name="IfObject_Result_6" />
+                <Variable x:TypeArguments="x:String" Name="IfObject_ResultString_6" />
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfObject.IfOption>
+          <p:IfObject.Value>
+            <InArgument x:TypeArguments="x:Object">
+              <p:ObjectLiteral>
+                <p:ObjectLiteral.Value>
+                  <x:Double>0</x:Double>
+                </p:ObjectLiteral.Value>
+              </p:ObjectLiteral>
+            </InArgument>
+          </p:IfObject.Value>
+        </p:IfObject>
+        <p:GetWindowsOSVersionAndBuild AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" DisplayName="Get Windows OS Version and Build" sap:VirtualizedContainerService.HintSize="1429,81" MinRequiredVersion="2.15.1.1" Moniker="07c518b8-4c38-454b-94f6-8cb8adc971fa" OSArchitecture="[GetWindowsOSVersionAndBuild_OSArchitecture]" OSBuildNumber="[GetWindowsOSVersionAndBuild_OSBuildNumber]" OSName="[GetWindowsOSVersionAndBuild_OSName]" OSVersion="[GetWindowsOSVersionAndBuild_OSVersion]" OutPut_64="[GetWindowsOSVersionAndBuild_OutPut_64]" ReleaseID="[GetWindowsOSVersionAndBuild_ReleaseID]" Result="[GetWindowsOSVersionAndBuild_Result]" ResultString="[GetWindowsOSVersionAndBuild_ResultString]" Results_x64="[GetWindowsOSVersionAndBuild_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="Execute64bit" TypeName="GetWindowsOSVersionAndBuild" m_bTextLinkChange="False" />
+        <p:IfObject CaseSensitive_Item="{x:Null}" CaseSensitive_ItemProp="{x:Null}" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" VerboseOutput_Item="{x:Null}" VerboseOutput_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" Condition="does not contain" Condition_DisplayArg="does not contain" DisplayName="IfNotWindows10" sap:VirtualizedContainerService.HintSize="1429,547" MinRequiredVersion="2.18.1.8" Moniker="cc6938b9-e92b-4450-a999-c18e95771dfe" Result="[IfObject_Result_1]" ResultString="[IfObject_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="Windows 10" Value_Type="x:String" Variable="[GetWindowsOSVersionAndBuild_OSName]" Variable_DisplayArg="Get Windows OS Version and Build.OS Name" Variable_Type="x:String" VerboseOutput="False" VerboseOutput_DisplayArg="" m_bTextLinkChange="False">
+          <p:IfObject.IfOption>
+            <p:SequenceActivity DisplayName="ThenExitScript" sap:VirtualizedContainerService.HintSize="437,274" Name="SequenceActivity">
+              <p:SequenceActivity.Activities>
+                <p:StopPolicy CompletionResult_Item="{x:Null}" CompletionResult_ItemProp="{x:Null}" StopReason_Item="{x:Null}" StopReason_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" CompletionResult="2" CompletionResult_DisplayArg="2" DisplayName="Stop Policy" sap:VirtualizedContainerService.HintSize="399,124" MinRequiredVersion="2.16.1.1" Moniker="e665ec06-a6d3-443d-a53c-25b8dad9a25a" Result="[StopPolicy_Result]" ResultString="[StopPolicy_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" StopReason="Invalid Operating System" StopReason_DisplayArg="Invalid Operating System" TypeName="StopPolicy" m_bTextLinkChange="False" />
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable x:TypeArguments="x:String" Name="StopPolicy_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="StopPolicy_Result" />
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfObject.IfOption>
+          <p:IfObject.Value>
+            <InArgument x:TypeArguments="x:Object">
+              <p:ObjectLiteral Value="Windows 10" />
+            </InArgument>
+          </p:IfObject.Value>
+        </p:IfObject>
+        <p:RegistryKeyExists BaseKey_Item="{x:Null}" BaseKey_ItemProp="{x:Null}" Key_Item="{x:Null}" Key_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" BaseKey="HKLM" BaseKey_DisplayArg="HKLM" Conditional="[RegistryKeyExists_Conditional]" DisplayName="CheckIfWindowsUpdateKeyExists" sap:VirtualizedContainerService.HintSize="1429,124" Key="SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" Key_DisplayArg="SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" MinRequiredVersion="2.10.0.19" Moniker="34422562-89a0-4ff7-901d-945e4d5d6a19" Result="[RegistryKeyExists_Result]" ResultString="[RegistryKeyExists_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RegistryKeyExists" m_bTextLinkChange="False" />
+        <p:IfObject CaseSensitive_Item="{x:Null}" CaseSensitive_ItemProp="{x:Null}" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" VerboseOutput_Item="{x:Null}" VerboseOutput_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" Condition="equals" Condition_DisplayArg="equals" DisplayName="IfWindowsUpdateKeyExists" sap:VirtualizedContainerService.HintSize="1429,1957" MinRequiredVersion="2.18.1.8" Moniker="2eea91ed-06cf-41bf-9c5b-069e515a4f3b" Result="[IfObject_Result]" ResultString="[IfObject_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="True" Value_Type="x:String" Variable="[RegistryKeyExists_Conditional]" Variable_DisplayArg="CheckIfWindowsUpdateKeyExists.Conditional" Variable_Type="x:String" VerboseOutput="False" VerboseOutput_DisplayArg="" m_bTextLinkChange="False">
+          <p:IfObject.IfOption>
+            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="605,1684" Name="SequenceActivity">
+              <p:SequenceActivity.Activities>
+                <p:RegistryValueExists BaseKey_Item="{x:Null}" BaseKey_ItemProp="{x:Null}" Key_Item="{x:Null}" Key_ItemProp="{x:Null}" Property_Item="{x:Null}" Property_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" BaseKey="HKLM" BaseKey_DisplayArg="HKLM" Conditional="[RegistryValueExists_Conditional]" DisplayName="TargetReleaseVersionExists" sap:VirtualizedContainerService.HintSize="567,160" Key="SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" Key_DisplayArg="SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" MinRequiredVersion="2.10.0.19" Moniker="682b7cd6-2362-4e62-9403-083ac1ff1935" Property="TargetReleaseVersionInfo" Property_DisplayArg="TargetReleaseVersionInfo" Result="[RegistryValueExists_Result]" ResultString="[RegistryValueExists_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RegistryValueExists" m_bTextLinkChange="False" />
+                <p:IfObject CaseSensitive_Item="{x:Null}" CaseSensitive_ItemProp="{x:Null}" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" VerboseOutput_Item="{x:Null}" VerboseOutput_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" Condition="equals" Condition_DisplayArg="equals" DisplayName="If" sap:VirtualizedContainerService.HintSize="567,1170" MinRequiredVersion="2.18.1.8" Moniker="af1374e8-7e25-4c15-bf7b-08247075aae1" Result="[IfObject_Result_3]" ResultString="[IfObject_ResultString_3]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="True" Value_Type="x:String" Variable="[RegistryValueExists_Conditional]" Variable_DisplayArg="TargetReleaseVersionExists.Conditional" Variable_Type="x:String" VerboseOutput="False" VerboseOutput_DisplayArg="" m_bTextLinkChange="False">
+                  <p:IfObject.IfOption>
+                    <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="535,897" Name="SequenceActivity">
+                      <p:SequenceActivity.Activities>
+                        <p:GetRegistryValue BaseKey_Item="{x:Null}" BaseKey_ItemProp="{x:Null}" Key_Item="{x:Null}" Key_ItemProp="{x:Null}" Property_Item="{x:Null}" Property_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" BaseKey="HKLM" BaseKey_DisplayArg="HKLM" DisplayName="GetReleaseInfoValue" sap:VirtualizedContainerService.HintSize="497,160" Key="SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" Key_DisplayArg="SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" MinRequiredVersion="2.10.0.19" Moniker="b2636c8f-ad56-413f-a3a8-42a1b365d15c" Property="TargetReleaseVersionInfo" Property_DisplayArg="TargetReleaseVersionInfo" Result="[GetRegistryValue_Result]" ResultString="[GetRegistryValue_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="GetRegistryValue" Value="[GetRegistryValue_Value]" m_bTextLinkChange="False" />
+                        <p:IfObject CaseSensitive_Item="{x:Null}" CaseSensitive_ItemProp="{x:Null}" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" VerboseOutput_Item="{x:Null}" VerboseOutput_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" Condition="equals" Condition_DisplayArg="equals" DisplayName="If" sap:VirtualizedContainerService.HintSize="497,547" MinRequiredVersion="2.18.1.8" Moniker="e318dd30-076c-41ee-9a20-7c8edbce0055" Result="[IfObject_Result_4]" ResultString="[IfObject_ResultString_4]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value="[TargetVersion]" Value_DisplayArg="Input Parameters.Target Version" Value_Type="x:String" Variable="[GetRegistryValue_Value]" Variable_DisplayArg="GetReleaseInfoValue.Value" Variable_Type="x:String" VerboseOutput="False" VerboseOutput_DisplayArg="" m_bTextLinkChange="False">
+                          <p:IfObject.IfOption>
+                            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="437,274" Name="SequenceActivity">
+                              <p:SequenceActivity.Activities>
+                                <p:StopPolicy CompletionResult_Item="{x:Null}" CompletionResult_ItemProp="{x:Null}" StopReason_Item="{x:Null}" StopReason_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" CompletionResult="1" CompletionResult_DisplayArg="1" DisplayName="Stop Policy" sap:VirtualizedContainerService.HintSize="399,124" MinRequiredVersion="2.16.1.1" Moniker="b7fae8f6-1905-423c-9455-b535750547c8" Result="[StopPolicy_Result_1]" ResultString="[StopPolicy_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" StopReason="Same Target Release Version" StopReason_DisplayArg="Same Target Release Version" TypeName="StopPolicy" m_bTextLinkChange="False" />
+                              </p:SequenceActivity.Activities>
+                              <p:SequenceActivity.Variables>
+                                <Variable x:TypeArguments="x:Double" Name="StopPolicy_Result_1" />
+                                <Variable x:TypeArguments="x:String" Name="StopPolicy_ResultString_1" />
+                              </p:SequenceActivity.Variables>
+                            </p:SequenceActivity>
+                          </p:IfObject.IfOption>
+                        </p:IfObject>
+                      </p:SequenceActivity.Activities>
+                      <p:SequenceActivity.Variables>
+                        <Variable x:TypeArguments="x:String" Name="GetRegistryValue_Value" />
+                        <Variable x:TypeArguments="x:String" Name="GetRegistryValue_ResultString" />
+                        <Variable x:TypeArguments="x:Double" Name="GetRegistryValue_Result" />
+                        <Variable x:TypeArguments="x:Double" Name="IfObject_Result_4" />
+                        <Variable x:TypeArguments="x:String" Name="IfObject_ResultString_4" />
+                      </p:SequenceActivity.Variables>
+                    </p:SequenceActivity>
+                  </p:IfObject.IfOption>
+                  <p:IfObject.Value>
+                    <InArgument x:TypeArguments="x:Object">
+                      <p:ObjectLiteral Value="True" />
+                    </InArgument>
+                  </p:IfObject.Value>
+                </p:IfObject>
+                <p:DeleteRegistryKey BaseKey_Item="{x:Null}" BaseKey_ItemProp="{x:Null}" Key_Item="{x:Null}" Key_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" BaseKey="HKLM" BaseKey_DisplayArg="HKLM" DisplayName="Delete Registry Key" sap:VirtualizedContainerService.HintSize="567,124" Key="SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" Key_DisplayArg="SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" MinRequiredVersion="2.10.0.19" Moniker="631227cf-cc4c-4f2a-9c0a-e9f874f0a34e" Result="[DeleteRegistryKey_Result]" ResultString="[DeleteRegistryKey_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="DeleteRegistryKey" m_bTextLinkChange="False" />
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable x:TypeArguments="x:String" Name="DeleteRegistryKey_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="DeleteRegistryKey_Result" />
+                <Variable x:TypeArguments="x:String" Name="RegistryValueExists_Conditional" />
+                <Variable x:TypeArguments="x:String" Name="RegistryValueExists_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="RegistryValueExists_Result" />
+                <Variable x:TypeArguments="x:Double" Name="IfObject_Result_3" />
+                <Variable x:TypeArguments="x:String" Name="IfObject_ResultString_3" />
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfObject.IfOption>
+          <p:IfObject.Value>
+            <InArgument x:TypeArguments="x:Object">
+              <p:ObjectLiteral Value="True" />
+            </InArgument>
+          </p:IfObject.Value>
+        </p:IfObject>
+        <p:CreateRegistryKey BaseKey_Item="{x:Null}" BaseKey_ItemProp="{x:Null}" NewKey_Item="{x:Null}" NewKey_ItemProp="{x:Null}" PropType_Item="{x:Null}" PropType_ItemProp="{x:Null}" PropertyName_Item="{x:Null}" PropertyName_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" BaseKey="HKLM" BaseKey_DisplayArg="HKLM" DisplayName="Create Registry Key" sap:VirtualizedContainerService.HintSize="1429,232" MinRequiredVersion="2.10.0.19" Moniker="43207332-3bcc-44e5-8a92-a7957d781553" NewKey="SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" NewKey_DisplayArg="SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" PropType="DWord" PropType_DisplayArg="DWord" PropertyName="TargetReleaseVersion" PropertyName_DisplayArg="TargetReleaseVersion" Result="[CreateRegistryKey_Result]" ResultString="[CreateRegistryKey_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="CreateRegistryKey" Value="1" Value_DisplayArg="1" m_bTextLinkChange="False" />
+        <p:SetRegistryValue BaseKey_Item="{x:Null}" BaseKey_ItemProp="{x:Null}" Key_Item="{x:Null}" Key_ItemProp="{x:Null}" PropertyName_Item="{x:Null}" PropertyName_ItemProp="{x:Null}" PropertyType_Item="{x:Null}" PropertyType_ItemProp="{x:Null}" PropertyValue_Item="{x:Null}" PropertyValue_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" BaseKey="HKLM" BaseKey_DisplayArg="HKLM" DisplayName="SetTargetReleaseInfo" sap:VirtualizedContainerService.HintSize="1429,232" Key="SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" Key_DisplayArg="SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" MinRequiredVersion="2.18.0.1" Moniker="7eb8fa4e-3eb4-42aa-a1e9-849b3eada389" PropertyName="TargetReleaseVersionInfo" PropertyName_DisplayArg="TargetReleaseVersionInfo" PropertyType="String" PropertyType_DisplayArg="String" PropertyValue="[TargetVersion]" PropertyValue_DisplayArg="Input Parameters.Target Version" Result="[SetRegistryValue_Result]" ResultString="[SetRegistryValue_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="SetRegistryValue" m_bTextLinkChange="False" />
+        <p:IfElse CaseSensitive_Item="{x:Null}" CaseSensitive_ItemProp="{x:Null}" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" Condition="greater than" Condition_DisplayArg="greater than" DisplayName="If/Else" sap:VirtualizedContainerService.HintSize="1429,1983" MinRequiredVersion="2.18.1.8" Moniker="c8cfc3b6-3249-49b0-899c-25cb8e1c833e" Result="[IfElse_Result]" ResultString="[IfElse_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfElse" Value_DisplayArg="0" Value_Type="x:Double" Variable="[ForceReboot]" Variable_DisplayArg="Input Parameters.Force Reboot" Variable_Type="x:Double" m_bTextLinkChange="False">
+          <p:IfElse.ElseOption>
+            <p:SequenceActivity DisplayName="Else" sap:VirtualizedContainerService.HintSize="456,346" Name="SequenceActivity">
+              <p:SequenceActivity.Activities>
+                <p:PromptUser Prompt_Item="{x:Null}" Prompt_ItemProp="{x:Null}" Title_Item="{x:Null}" Title_ItemProp="{x:Null}" Type_Item="{x:Null}" Type_ItemProp="{x:Null}" Wait_Item="{x:Null}" Wait_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" ClickResult="[PromptUser_ClickResult_1]" DisplayName="Prompt" sap:VirtualizedContainerService.HintSize="418,196" MinRequiredVersion="2.10.0.19" Moniker="df00b46f-8725-4d57-9152-7d83fc921eb9" Prompt="Please restart your system for critical updates." Prompt_DisplayArg="Please restart your system for critical updates." Result="[PromptUser_Result_1]" ResultString="[PromptUser_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" Title="System Restart Needed" Title_DisplayArg="System Restart Needed" Type="0" TypeName="PromptUser" Type_DisplayArg="OK" Wait="900" Wait_DisplayArg="900" m_bTextLinkChange="False" />
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable x:TypeArguments="x:String" Name="PromptUser_ClickResult_1" />
+                <Variable x:TypeArguments="x:Double" Name="PromptUser_Result_1" />
+                <Variable x:TypeArguments="x:String" Name="PromptUser_ResultString_1" />
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfElse.ElseOption>
+          <p:IfElse.IfOption>
+            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="929,1746" Name="SequenceActivity">
+              <p:SequenceActivity.Activities>
+                <p:IsUserLoggedOn Domain_Item="{x:Null}" Domain_ItemProp="{x:Null}" User_Item="{x:Null}" User_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" Conditional="[IsUserLoggedOn_Conditional]" DisplayName="Is User Logged On" Domain="*" Domain_DisplayArg="*" sap:VirtualizedContainerService.HintSize="891,124" MinRequiredVersion="2.10.0.19" Moniker="d099b966-44b7-4c82-9404-da0f46715c84" Result="[IsUserLoggedOn_Result]" ResultString="[IsUserLoggedOn_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="IsUserLoggedOn" User="*" User_DisplayArg="*" m_bTextLinkChange="False" />
+                <p:IfObject CaseSensitive_Item="{x:Null}" CaseSensitive_ItemProp="{x:Null}" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" VerboseOutput_Item="{x:Null}" VerboseOutput_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" Condition="equals" Condition_DisplayArg="equals" DisplayName="If" sap:VirtualizedContainerService.HintSize="891,1183" MinRequiredVersion="2.18.1.8" Moniker="f4585b4e-8023-469a-9755-cf5b0b636aab" Result="[IfObject_Result_2]" ResultString="[IfObject_ResultString_2]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="True" Value_Type="x:String" Variable="[IsUserLoggedOn_Conditional]" Variable_DisplayArg="Is User Logged On.Conditional" Variable_Type="x:String" VerboseOutput="False" VerboseOutput_DisplayArg="" m_bTextLinkChange="False">
+                  <p:IfObject.IfOption>
+                    <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="859,910" Name="SequenceActivity">
+                      <p:SequenceActivity.Activities>
+                        <p:Math Number0_Item="{x:Null}" Number0_ItemProp="{x:Null}" Number1_Item="{x:Null}" Number1_ItemProp="{x:Null}" Operation_Item="{x:Null}" Operation_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" DisplayName="MathRebooTimeToMinutes" sap:VirtualizedContainerService.HintSize="821,160" MinRequiredVersion="2.16.1.1" Moniker="147f1941-cb67-4366-9f72-2b633397948c" Number0="[RebootAfterSeconds]" Number0_DisplayArg="Input Parameters.Reboot After (Seconds)" Number1="60" Number1_DisplayArg="60" NumberResult="[Math_NumberResult]" Operation="Divide" Operation_DisplayArg="Divide" Result="[Math_Result]" ResultString="[Math_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="Math" m_bTextLinkChange="False" />
+                        <p:FormatNumber Format_Item="{x:Null}" Format_ItemProp="{x:Null}" Number_Item="{x:Null}" Number_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" DisplayName="FormattedTimeToReboot" Format="Number" Format_DisplayArg="Number" FormattedNumber="[FormatNumber_FormattedNumber]" sap:VirtualizedContainerService.HintSize="821,124" MinRequiredVersion="2.10.0.19" Moniker="d00acc2f-7fb0-4d8f-94e4-b2a5664421cd" Number="[Math_NumberResult]" Number_DisplayArg="MathRebooTimeToMinutes.NumberResult" Result="[FormatNumber_Result]" ResultString="[FormatNumber_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="FormatNumber" m_bTextLinkChange="False" />
+                        <p:FormatString Input0_Item="{x:Null}" Input0_ItemProp="{x:Null}" Input1="{x:Null}" Input1_DisplayArg="{x:Null}" Input1_Item="{x:Null}" Input1_ItemProp="{x:Null}" Text_Item="{x:Null}" Text_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" DisplayName="RebootPromptString" FormattedString="[FormatString_FormattedString]" sap:VirtualizedContainerService.HintSize="821,160" Input0="[FormatNumber_FormattedNumber]" Input0_DisplayArg="FormattedTimeToReboot.FormattedString" MinRequiredVersion="2.10.0.19" Moniker="f8d34c47-49ae-4100-876d-f231c44d48d8" Result="[FormatString_Result]" ResultString="[FormatString_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Text="Your system will restart in {0} minutes for critical updates. Please save your work and close any applications you have open." Text_DisplayArg="Your system will restart in {0} minutes for critical updates. Please save your work and close any applications you have open." TypeName="FormatString" m_bTextLinkChange="False" />
+                        <p:PromptUser Prompt_Item="{x:Null}" Prompt_ItemProp="{x:Null}" Title_Item="{x:Null}" Title_ItemProp="{x:Null}" Type_Item="{x:Null}" Type_ItemProp="{x:Null}" Wait_Item="{x:Null}" Wait_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" ClickResult="[PromptUser_ClickResult]" DisplayName="Prompt" sap:VirtualizedContainerService.HintSize="821,196" MinRequiredVersion="2.10.0.19" Moniker="9f016a5d-ffb9-430e-9ad3-5ffcb2df63c7" Prompt="[FormatString_FormattedString]" Prompt_DisplayArg="RebootPromptString.FormattedString" Result="[PromptUser_Result]" ResultString="[PromptUser_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" Title="System Restart Warning" Title_DisplayArg="System Restart Warning" Type="0" TypeName="PromptUser" Type_DisplayArg="OK" Wait="900" Wait_DisplayArg="900" m_bTextLinkChange="False" />
+                      </p:SequenceActivity.Activities>
+                      <p:SequenceActivity.Variables>
+                        <Variable x:TypeArguments="x:String" Name="PromptUser_ClickResult" />
+                        <Variable x:TypeArguments="x:Double" Name="PromptUser_Result" />
+                        <Variable x:TypeArguments="x:String" Name="PromptUser_ResultString" />
+                        <Variable x:TypeArguments="x:Double" Name="Math_NumberResult" />
+                        <Variable x:TypeArguments="x:String" Name="Math_ResultString" />
+                        <Variable x:TypeArguments="x:Double" Name="Math_Result" />
+                        <Variable x:TypeArguments="x:String" Name="FormatString_FormattedString" />
+                        <Variable x:TypeArguments="x:String" Name="FormatString_ResultString" />
+                        <Variable x:TypeArguments="x:Double" Name="FormatString_Result" />
+                        <Variable x:TypeArguments="x:String" Name="FormatNumber_FormattedNumber" />
+                        <Variable x:TypeArguments="x:String" Name="FormatNumber_ResultString" />
+                        <Variable x:TypeArguments="x:Double" Name="FormatNumber_Result" />
+                      </p:SequenceActivity.Variables>
+                    </p:SequenceActivity>
+                  </p:IfObject.IfOption>
+                  <p:IfObject.Value>
+                    <InArgument x:TypeArguments="x:Object">
+                      <p:ObjectLiteral Value="True" />
+                    </InArgument>
+                  </p:IfObject.Value>
+                </p:IfObject>
+                <p:Wait WaitTime_Item="{x:Null}" WaitTime_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" DisplayName="Wait" sap:VirtualizedContainerService.HintSize="891,88" MinRequiredVersion="2.10.0.19" Moniker="071f3fba-8610-4ccf-b846-026beb759cbb" Result="[Wait_Result]" ResultString="[Wait_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="Wait" WaitTime="[RebootAfterSeconds]" WaitTime_DisplayArg="Input Parameters.Reboot After (Seconds)" m_bTextLinkChange="False" />
+                <p:InitializeSystemRestart AssemblyName="PolicyExecutionEngine, Version=2.18.1.18, Culture=neutral, PublicKeyToken=null" DisplayName="Initialize System Restart" sap:VirtualizedContainerService.HintSize="891,81" MinRequiredVersion="2.16.0.1" Moniker="e34c1166-be4d-4598-ab73-851741ab411b" Result="[InitializeSystemRestart_Result]" ResultString="[InitializeSystemRestart_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="InitializeSystemRestart" m_bTextLinkChange="False" />
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable x:TypeArguments="x:String" Name="IsUserLoggedOn_Conditional" />
+                <Variable x:TypeArguments="x:Double" Name="IsUserLoggedOn_Result" />
+                <Variable x:TypeArguments="x:String" Name="IsUserLoggedOn_ResultString" />
+                <Variable x:TypeArguments="x:String" Name="IfObject_ResultString_2" />
+                <Variable x:TypeArguments="x:Double" Name="IfObject_Result_2" />
+                <Variable x:TypeArguments="x:Double" Name="Wait_Result" />
+                <Variable x:TypeArguments="x:String" Name="Wait_ResultString" />
+                <Variable x:TypeArguments="x:String" Name="InitializeSystemRestart_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="InitializeSystemRestart_Result" />
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfElse.IfOption>
+          <p:IfElse.Value>
+            <InArgument x:TypeArguments="x:Object">
+              <p:ObjectLiteral>
+                <p:ObjectLiteral.Value>
+                  <x:Double>0</x:Double>
+                </p:ObjectLiteral.Value>
+              </p:ObjectLiteral>
+            </InArgument>
+          </p:IfElse.Value>
+        </p:IfElse>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RegistryKeyExists_Conditional" />
+        <Variable x:TypeArguments="x:String" Name="RegistryKeyExists_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="RegistryKeyExists_Result" />
+        <Variable x:TypeArguments="x:String" Name="IfObject_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="IfObject_Result" />
+        <Variable x:TypeArguments="x:String" Name="CreateRegistryKey_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="CreateRegistryKey_Result" />
+        <Variable x:TypeArguments="x:String" Name="SetRegistryValue_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="SetRegistryValue_Result" />
+        <Variable x:TypeArguments="x:String" Name="GetWindowsOSVersionAndBuild_OSName" />
+        <Variable x:TypeArguments="x:String" Name="GetWindowsOSVersionAndBuild_OSBuildNumber" />
+        <Variable x:TypeArguments="x:String" Name="GetWindowsOSVersionAndBuild_OSArchitecture" />
+        <Variable x:TypeArguments="x:String" Name="GetWindowsOSVersionAndBuild_OSVersion" />
+        <Variable x:TypeArguments="x:String" Name="GetWindowsOSVersionAndBuild_ReleaseID" />
+        <Variable x:TypeArguments="x:String" Name="GetWindowsOSVersionAndBuild_OutPut_64" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="GetWindowsOSVersionAndBuild_Results_x64" />
+        <Variable x:TypeArguments="x:String" Name="GetWindowsOSVersionAndBuild_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="GetWindowsOSVersionAndBuild_Result" />
+        <Variable x:TypeArguments="x:String" Name="IfObject_ResultString_1" />
+        <Variable x:TypeArguments="x:Double" Name="IfObject_Result_1" />
+        <Variable x:TypeArguments="x:String" Name="IfElse_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="IfElse_Result" />
+        <Variable x:TypeArguments="x:Double" Name="IfObject_Result_5" />
+        <Variable x:TypeArguments="x:String" Name="IfObject_ResultString_5" />
+        <Variable x:TypeArguments="x:String" Default="21H1" Name="TargetVersion" />
+        <Variable x:TypeArguments="x:Double" Default="2" Name="ForceReboot" />
+        <Variable x:TypeArguments="x:Double" Default="5846" Name="RebootAfterSeconds" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

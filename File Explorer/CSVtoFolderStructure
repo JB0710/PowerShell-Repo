@@ -1,0 +1,9 @@
+$csvPath = "A:\Clients\Federal Benefits Retirement Group\Clients.csv"
+$csv = Import-CSV $csvPath
+
+$csv | ForEach-Object {
+    $user = $_.FirstName.Substring(0,1) + " " + $_.LastName
+    $parentpath = "A:\Clients\Federal Benefits Retirement Group\Clients\$user\"
+    $folderpath = Join-Path -Path $parentpath 
+    New-Item $folderpath -ItemType Directory
+}

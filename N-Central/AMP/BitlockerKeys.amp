@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="d1d09425-f335-4ee9-88b9-c72336fa116c" Name="BitlockerKeys" Description="Qml0bG9ja2VyIEtleXM=" Version="2.4.0.43" RemoteCategory="0" ExecutionType="Local" PS3ObjectCount="0">
+  <Object ID="{9aed9c37-ed98-4412-aefa-86c949ebce6e}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;oda&quot; Label=&quot;Encrypted Drive Found - 1 - Name:&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scoutda&quot; /&gt;&lt;Parameter ParameterName=&quot;oka&quot; Label=&quot;Encrypted Drive Found - 1 - Key:&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scoutka&quot; /&gt;&lt;Parameter ParameterName=&quot;odb&quot; Label=&quot;Encrypted Drive Found - 2 - Name:&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scoutdb&quot; /&gt;&lt;Parameter ParameterName=&quot;okb&quot; Label=&quot;Encrypted Drive Found - 2 - Key:&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scoutkb&quot; /&gt;&lt;Parameter ParameterName=&quot;odc&quot; Label=&quot;Encrypted Drive Found - 3 - Name:&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scoutdc&quot; /&gt;&lt;Parameter ParameterName=&quot;okc&quot; Label=&quot;Encrypted Drive Found - 3 - Key:&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scoutkc&quot; /&gt;&lt;Parameter ParameterName=&quot;odd&quot; Label=&quot;Encrypted Drive Found - 4 - Name:&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scoutdd&quot; /&gt;&lt;Parameter ParameterName=&quot;okd&quot; Label=&quot;Encrypted Drive Found - 4 - Key:&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scoutkd&quot; /&gt;&lt;Parameter ParameterName=&quot;ode&quot; Label=&quot;Encrypted Drive Found - 5 - Name:&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scoutde&quot; /&gt;&lt;Parameter ParameterName=&quot;oke&quot; Label=&quot;Encrypted Drive Found - 5 - Key:&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scoutke&quot; /&gt;&lt;Parameter ParameterName=&quot;odf&quot; Label=&quot;Encrypted Drive Found - 6 Name:&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scoutdf&quot; /&gt;&lt;Parameter ParameterName=&quot;okf&quot; Label=&quot;Encrypted Drive Found - 6 - Key:&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scoutkf&quot; /&gt;&lt;Parameter ParameterName=&quot;odg&quot; Label=&quot;Encrypted Drive Found - 7 - Name:&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scoutdg&quot; /&gt;&lt;Parameter ParameterName=&quot;okg&quot; Label=&quot;Encrypted Drive Found - 7 - Key:&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scoutkg&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>dd5b19ab-cb4b-401e-ae5c-1231727285ab.scoutda</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>oda</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>dd5b19ab-cb4b-401e-ae5c-1231727285ab.scoutka</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>oka</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>dd5b19ab-cb4b-401e-ae5c-1231727285ab.scoutdb</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>odb</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>dd5b19ab-cb4b-401e-ae5c-1231727285ab.scoutkb</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>okb</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>dd5b19ab-cb4b-401e-ae5c-1231727285ab.scoutdc</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>odc</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>dd5b19ab-cb4b-401e-ae5c-1231727285ab.scoutkc</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>okc</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>dd5b19ab-cb4b-401e-ae5c-1231727285ab.scoutdd</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>odd</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>dd5b19ab-cb4b-401e-ae5c-1231727285ab.scoutkd</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>okd</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>dd5b19ab-cb4b-401e-ae5c-1231727285ab.scoutde</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>ode</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>dd5b19ab-cb4b-401e-ae5c-1231727285ab.scoutke</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>oke</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>dd5b19ab-cb4b-401e-ae5c-1231727285ab.scoutdf</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>odf</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>dd5b19ab-cb4b-401e-ae5c-1231727285ab.scoutkf</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>okf</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>dd5b19ab-cb4b-401e-ae5c-1231727285ab.scoutdg</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>odg</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>dd5b19ab-cb4b-401e-ae5c-1231727285ab.scoutkg</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>okg</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Activity mc:Ignorable="sap sads" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>490,571</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="504,715" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.4.0.43, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="468,522" Moniker="dd5b19ab-cb4b-401e-ae5c-1231727285ab" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="a32962a8-685a-4801-b9d7-e1350409cc8a" m_bTextLinkChange="False" script="JABCAGkAdABsAG8AYwBrAGUAcgBWAG8AbAB1AG0AZQByAHMAIAA9ACAARwBlAHQALQBCAGkAdABMAG8AYwBrAGUAcgBWAG8AbAB1AG0AZQANAAoADQAKACQAaQBuAHQAawBlAHkAZgBvAHUAbgBkACAAPQAwAA0ACgANAAoAJABLAGUAeQBhAD0AIgBOAG8AIABSAGUAYwBvAHYAZQByAHkAIABLAGUAeQBzACAARgBvAHUAbgBkACIADQAKACQARAByAHYAYQA9ACIATgBvACAARAByAGkAdgBlAHMAIABoAGEAdgBlACAAQQB2AGEAaQBsAGEAYgBsAGUAIABSAGUAYwBvAHYAZQByAHkAIABLAGUAeQBzACIADQAKACQASwBlAHkAYgA9ACIAIgANAAoAJABEAHIAdgBiAD0AIgAiAA0ACgAkAEsAZQB5AGMAPQAiACIADQAKACQARAByAHYAYwA9ACIAIgANAAoAJABLAGUAeQBkAD0AIgAiAA0ACgAkAEQAcgB2AGQAPQAiACIADQAKACQASwBlAHkAZQA9ACIAIgANAAoAJABEAHIAdgBlAD0AIgAiAA0ACgAkAEsAZQB5AGYAPQAiACIADQAKACQARAByAHYAZgA9ACIAIgANAAoAJABLAGUAeQBnAD0AIgAiAA0ACgAkAEQAcgB2AGcAPQAiACIADQAKACMAIABGAG8AcgAgAGUAYQBjAGgAIAB2AG8AbAB1AG0AZQAsACAAZwBlAHQAIAB0AGgAZQAgAFIAZQBjAG8AdgBlAHIAeQBQAGEAcwBzAG8AdwByAGQAIABhAG4AZAAgAGQAaQBzAHAAbABhAHkAIABpAHQALgANAAoAJABCAGkAdABsAG8AYwBrAGUAcgBWAG8AbAB1AG0AZQByAHMAIAB8AA0ACgAgACAAIAAgAEYAbwByAEUAYQBjAGgALQBPAGIAagBlAGMAdAAgAHsADQAKACAAIAAgACAAIAAgACAAIAAkAE0AbwB1AG4AdABQAG8AaQBuAHQAIAA9ACAAJABfAC4ATQBvAHUAbgB0AFAAbwBpAG4AdAAgAA0ACgAgACAAIAAgACAAIAAgACAAJABSAGUAYwBvAHYAZQByAHkASwBlAHkAIAA9ACAAWwBzAHQAcgBpAG4AZwBdACgAJABfAC4ASwBlAHkAUAByAG8AdABlAGMAdABvAHIAKQAuAFIAZQBjAG8AdgBlAHIAeQBQAGEAcwBzAHcAbwByAGQAIAAgACAAIAAgACAAIAANAAoAIAAgACAAIAAgACAAIAAgAGkAZgAgACgAJABSAGUAYwBvAHYAZQByAHkASwBlAHkALgBMAGUAbgBnAHQAaAAgAC0AZwB0ACAANQApACAAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgAFcAcgBpAHQAZQAtAE8AdQB0AHAAdQB0ACAAKAAiAFQAaABlACAAZAByAGkAdgBlACAAJABNAG8AdQBuAHQAUABvAGkAbgB0ACAAaABhAHMAIABhACAAcgBlAGMAbwB2AGUAcgB5ACAAawBlAHkAIAAkAFIAZQBjAG8AdgBlAHIAeQBLAGUAeQAuACIAKQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAaQBmACgAJABpAG4AdABrAGUAeQBmAG8AdQBuAGQAIAAtAGUAcQAgADAAKQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAkAEsAZQB5AGEAPQAkAFIAZQBjAG8AdgBlAHIAeQBLAGUAeQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAkAEQAcgB2AGEAPQAkAE0AbwB1AG4AdABQAG8AaQBuAHQADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgAGUAbABzAGUAaQBmACgAJABpAG4AdABrAGUAeQBmAG8AdQBuAGQAIAAgAC0AZQBxACAAMQApAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQASwBlAHkAYgA9ACQAUgBlAGMAbwB2AGUAcgB5AEsAZQB5AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQARAByAHYAYgA9ACQATQBvAHUAbgB0AFAAbwBpAG4AdAANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAfQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAZQBsAHMAZQBpAGYAKAAkAGkAbgB0AGsAZQB5AGYAbwB1AG4AZAAgACAALQBlAHEAIAAyACkADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgAHsADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABLAGUAeQBjAD0AJABSAGUAYwBvAHYAZQByAHkASwBlAHkADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABEAHIAdgBjAD0AJABNAG8AdQBuAHQAUABvAGkAbgB0AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAB9AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIABlAGwAcwBlAGkAZgAoACQAaQBuAHQAawBlAHkAZgBvAHUAbgBkACAAIAAtAGUAcQAgADMAKQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAkAEsAZQB5AGQAPQAkAFIAZQBjAG8AdgBlAHIAeQBLAGUAeQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAkAEQAcgB2AGQAPQAkAE0AbwB1AG4AdABQAG8AaQBuAHQADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgAGUAbABzAGUAaQBmACgAJABpAG4AdABrAGUAeQBmAG8AdQBuAGQAIAAgAC0AZQBxACAANAApAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQASwBlAHkAZQA9ACQAUgBlAGMAbwB2AGUAcgB5AEsAZQB5AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQARAByAHYAZQA9ACQATQBvAHUAbgB0AFAAbwBpAG4AdAANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAfQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAZQBsAHMAZQBpAGYAKAAkAGkAbgB0AGsAZQB5AGYAbwB1AG4AZAAgACAALQBlAHEAIAA1ACkADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgAHsADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABLAGUAeQBmAD0AJABSAGUAYwBvAHYAZQByAHkASwBlAHkADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABEAHIAdgBmAD0AJABNAG8AdQBuAHQAUABvAGkAbgB0AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAB9AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIABlAGwAcwBlAGkAZgAoACQAaQBuAHQAawBlAHkAZgBvAHUAbgBkACAAIAAtAGUAcQAgADYAKQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAkAEsAZQB5AGcAPQAkAFIAZQBjAG8AdgBlAHIAeQBLAGUAeQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAkAEQAcgB2AGcAPQAkAE0AbwB1AG4AdABQAG8AaQBuAHQADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQAaQBuAHQAawBlAHkAZgBvAHUAbgBkACAAPQAgACQAaQBuAHQAawBlAHkAZgBvAHUAbgBkACAAKwAgADEADQAKACAAIAAgACAAIAAgACAAIAB9ACAAIAAgACAAIAAgACAAIAANAAoAIAAgACAAIAB9AA0ACgANAAoAIAAkAHMAYwBvAHUAdABkAGEAIAA9ACAAJABEAHIAdgBhAA0ACgAgACQAcwBjAG8AdQB0AGsAYQAgAD0AIAAkAEsAZQB5AGEADQAKACAAJABzAGMAbwB1AHQAawBiACAAPQAgACQASwBlAHkAYgANAAoAIAAkAHMAYwBvAHUAdABkAGIAIAA9ACAAJABEAHIAdgBiAA0ACgAgACQAcwBjAG8AdQB0AGQAYwAgAD0AIAAkAEQAcgB2AGMADQAKACAAJABzAGMAbwB1AHQAawBjACAAPQAgACQASwBlAHkAYwANAAoAIAAkAHMAYwBvAHUAdABkAGQAIAA9ACAAJABEAHIAdgBkAA0ACgAgACQAcwBjAG8AdQB0AGsAZAAgAD0AIAAkAEsAZQB5AGQADQAKACAAJABzAGMAbwB1AHQAZABlACAAPQAgACQARAByAHYAZQANAAoAIAAkAHMAYwBvAHUAdABrAGUAIAA9ACAAJABLAGUAeQBlAA0ACgAgACQAcwBjAG8AdQB0AGQAZgAgAD0AIAAkAEQAcgB2AGYADQAKACAAJABzAGMAbwB1AHQAawBmACAAPQAgACQASwBlAHkAZgANAAoAIAAkAHMAYwBvAHUAdABkAGcAIAA9ACAAJABEAHIAdgBnAA0ACgAgACQAcwBjAG8AdQB0AGsAZwAgAD0AIAAkAEsAZQB5AGcADQAKAA==">
+          <p:RunPowerShellScript.InArgs>
+            <scg:Dictionary x:TypeArguments="x:String, p:InArg" />
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="scoutda" ArgType="string" DisplayName="scoutda" Name="scoutda">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_scoutda]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="scoutka" ArgType="string" DisplayName="scoutka" Name="scoutka">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_scoutka]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="scoutkb" ArgType="string" DisplayName="scoutkb" Name="scoutkb">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_scoutkb]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="scoutdb" ArgType="string" DisplayName="scoutdb" Name="scoutdb">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_scoutdb]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="scoutdc" ArgType="string" DisplayName="scoutdc" Name="scoutdc">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_scoutdc]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="scoutkc" ArgType="string" DisplayName="scoutkc" Name="scoutkc">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_scoutkc]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="scoutdd" ArgType="string" DisplayName="scoutdd" Name="scoutdd">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_scoutdd]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="scoutkd" ArgType="string" DisplayName="scoutkd" Name="scoutkd">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_scoutkd]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="scoutde" ArgType="string" DisplayName="scoutde" Name="scoutde">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_scoutde]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="scoutke" ArgType="string" DisplayName="scoutke" Name="scoutke">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_scoutke]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="scoutdf" ArgType="string" DisplayName="scoutdf" Name="scoutdf">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_scoutdf]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="scoutdg" ArgType="string" DisplayName="scoutdg" Name="scoutdg">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_scoutdg]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="scoutkg" ArgType="string" DisplayName="scoutkg" Name="scoutkg">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_scoutkg]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="scoutkf" ArgType="string" DisplayName="scoutkf" Name="scoutkf">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_scoutkf]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_scoutka" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_scoutda" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_scoutkb" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_scoutdb" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_scoutdc" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_scoutkc" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_scoutdd" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_scoutkd" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_scoutde" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_scoutke" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_scoutdf" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_scoutdg" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_scoutkg" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_scoutkf" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

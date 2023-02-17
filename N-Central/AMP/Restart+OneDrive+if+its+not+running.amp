@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="4698ee55-7063-4293-a6ac-ce0552c8b0fe" Name="Restart OneDrive if its not running" Description="UkVzdGFydCBvbmVkcml2ZSBpZiBuZWVkZWQ=" Version="2.16.0.1" MinRequiredVersion="2.16.0.1" RemoteCategory="0" ExecutionType="CurrentLoggedOnUser" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{ef3c98bc-dcd5-4cf1-a2da-523894f7d336}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml /&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" />
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.18.0.7" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>612,1110</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="612,1110" MinRequiredVersion="2.16.0.1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:IsProcessRunning Process_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.0.7, Culture=neutral, PublicKeyToken=null" Conditional="[IsProcessRunning_Conditional]" DisplayName="Is Process Running" sap:VirtualizedContainerService.HintSize="576,88" MinRequiredVersion="2.10.0.19" Moniker="1b6c0e4b-47cf-491d-94cd-412e30713e39" Process="OneDrive" Process_DisplayArg="OneDrive" Process_Item="{x:Null}" Result="[IsProcessRunning_Result]" ResultString="[IsProcessRunning_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="IsProcessRunning" m_bTextLinkChange="False" />
+        <p:IfObject CaseSensitive_Item="{x:Null}" CaseSensitive_ItemProp="{x:Null}" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" VerboseOutput_Item="{x:Null}" VerboseOutput_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.0.7, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" Condition="equals" Condition_DisplayArg="equals" DisplayName="If" sap:VirtualizedContainerService.HintSize="576,759" MinRequiredVersion="2.16.0.1" Moniker="c5c1e9ec-3a33-4195-83ba-0b79656b3dc3" Result="[IfObject_Result]" ResultString="[IfObject_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="False" Value_Type="x:String" Variable="[IsProcessRunning_Conditional]" Variable_DisplayArg="Is Process Running.Conditional" Variable_Type="x:String" VerboseOutput="False" VerboseOutput_DisplayArg="" m_bTextLinkChange="False">
+          <p:IfObject.IfOption>
+            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="544,486" Name="SequenceActivity">
+              <p:SequenceActivity.Activities>
+                <p:RunProgram Arguments="{x:Null}" Arguments_DisplayArg="{x:Null}" Arguments_Item="{x:Null}" Arguments_ItemProp="{x:Null}" Program_Item="{x:Null}" Program_ItemProp="{x:Null}" RunAsType_Item="{x:Null}" RunAsType_ItemProp="{x:Null}" WaitForCompletion_Item="{x:Null}" WaitForCompletion_ItemProp="{x:Null}" WindowType_Item="{x:Null}" WindowType_ItemProp="{x:Null}" WorkingDirectory_Item="{x:Null}" WorkingDirectory_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.0.7, Culture=neutral, PublicKeyToken=null" DisplayName="Run Program" sap:VirtualizedContainerService.HintSize="506,336" MinRequiredVersion="2.10.0.19" Moniker="765815ca-2c07-441d-b235-ef5cf63b4991" ProcessID="[RunProgram_ProcessID]" Program="C:\Program Files (x86)\Microsoft OneDrive\Onedrive.exe" Program_DisplayArg="C:\Program Files (x86)\Microsoft OneDrive\Onedrive.exe" Result="[RunProgram_Result]" ResultString="[RunProgram_ResultString]" RunAsCurrentLoggedOnUser="True" RunAsType="CLU" RunAsType_DisplayArg="LocalSystem" ScriptExecutionMethod="None" TypeName="RunProgram" WaitForCompletion="False" WaitForCompletion_DisplayArg="" WindowType="Normal" WindowType_DisplayArg="Normal" WorkingDirectory="C:\Program Files (x86)\Microsoft OneDrive" WorkingDirectory_DisplayArg="C:\Program Files (x86)\Microsoft OneDrive" m_bTextLinkChange="False" />
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable x:TypeArguments="x:String" Name="RunProgram_ProcessID" />
+                <Variable x:TypeArguments="x:String" Name="RunProgram_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="RunProgram_Result" />
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfObject.IfOption>
+          <p:IfObject.Value>
+            <InArgument x:TypeArguments="x:Object">
+              <p:ObjectLiteral Value="False" />
+            </InArgument>
+          </p:IfObject.Value>
+        </p:IfObject>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="IsProcessRunning_Conditional" />
+        <Variable x:TypeArguments="x:String" Name="IsProcessRunning_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="IsProcessRunning_Result" />
+        <Variable x:TypeArguments="x:Double" Name="IfObject_Result" />
+        <Variable x:TypeArguments="x:String" Name="IfObject_ResultString" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

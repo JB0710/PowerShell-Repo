@@ -1,0 +1,1 @@
+netsh interface ip set address name="USB Ethernet" source=dhcp

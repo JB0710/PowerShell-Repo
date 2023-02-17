@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="e9aed84c-c16b-4a78-8f7f-d363a1a7987f" Name="Install PowerShell 7.2" Description="VGhpcyB3aWxsIGluc3RhbGwgSW5zdGFsbCBQb3dlclNoZWxsIDcuMg==" Version="2.16.0.1" MinRequiredVersion="2.16.0.1" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{b7676992-e852-4e08-a595-2df0a8c161a9}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml /&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" />
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.18.3.1" />
+  <Activity mc:Ignorable="sap sads" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>841,2303</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="841,2303" MinRequiredVersion="2.16.0.1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:FolderExists Folder_Item="{x:Null}" Folder_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" Conditional="[FolderExists_Conditional]" DisplayName="Folder Exists - Temp" Folder="C:\Temp" Folder_DisplayArg="C:\Temp" sap:VirtualizedContainerService.HintSize="805,88" MinRequiredVersion="2.10.0.19" Moniker="0c25bd3d-e1fd-4018-858e-9bd4036e26bc" Result="[FolderExists_Result]" ResultString="[FolderExists_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="FolderExists" m_bTextLinkChange="False" />
+        <p:FolderExists Folder_Item="{x:Null}" Folder_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" Conditional="[FolderExists_Conditional_1]" DisplayName="Folder Exists - pwsh" Folder="C:\Program Files\PowerShell\7" Folder_DisplayArg="C:\Program Files\PowerShell\7" sap:VirtualizedContainerService.HintSize="805,88" MinRequiredVersion="2.10.0.19" Moniker="ee330c4c-e29c-420e-8469-e67efe69e456" Result="[FolderExists_Result_1]" ResultString="[FolderExists_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="FolderExists" m_bTextLinkChange="False" />
+        <p:IfObject CaseSensitive_Item="{x:Null}" CaseSensitive_ItemProp="{x:Null}" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" VerboseOutput_Item="{x:Null}" VerboseOutput_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" Condition="equals" Condition_DisplayArg="equals" DisplayName="If" sap:VirtualizedContainerService.HintSize="805,511" MinRequiredVersion="2.16.0.1" Moniker="42948a9b-b767-4e72-afaa-6fbadfab6a70" Result="[IfObject_Result]" ResultString="[IfObject_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="False" Value_Type="x:String" Variable="[FolderExists_Conditional]" Variable_DisplayArg="Folder Exists - Temp.Conditional" Variable_Type="x:String" VerboseOutput="False" VerboseOutput_DisplayArg="" m_bTextLinkChange="False">
+          <p:IfObject.IfOption>
+            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="371,238" Name="SequenceActivity">
+              <p:SequenceActivity.Activities>
+                <p:CreateFolder Folder_Item="{x:Null}" Folder_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" DisplayName="Create Folder" Folder="C:\temp" FolderInfo="[CreateFolder_FolderInfo]" Folder_DisplayArg="C:\temp" sap:VirtualizedContainerService.HintSize="333,88" MinRequiredVersion="2.10.0.19" Moniker="f600cbe6-d8aa-40f4-ac51-95018483b8f3" Result="[CreateFolder_Result]" ResultString="[CreateFolder_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="CreateFolder" m_bTextLinkChange="False" />
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable x:TypeArguments="x:String" Name="CreateFolder_FolderInfo" />
+                <Variable x:TypeArguments="x:String" Name="CreateFolder_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="CreateFolder_Result" />
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfObject.IfOption>
+          <p:IfObject.Value>
+            <InArgument x:TypeArguments="x:Object">
+              <p:ObjectLiteral Value="False" />
+            </InArgument>
+          </p:IfObject.Value>
+        </p:IfObject>
+        <p:IfObject CaseSensitive_Item="{x:Null}" CaseSensitive_ItemProp="{x:Null}" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" VerboseOutput_Item="{x:Null}" VerboseOutput_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" Condition="equals" Condition_DisplayArg="equals" DisplayName="If" sap:VirtualizedContainerService.HintSize="805,1273" MinRequiredVersion="2.16.0.1" Moniker="5f3c7386-9dbd-437a-87ae-a6227982e68b" Result="[IfObject_Result_1]" ResultString="[IfObject_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="False" Value_Type="x:String" Variable="[FolderExists_Conditional_1]" Variable_DisplayArg="Folder Exists - pwsh.Conditional" Variable_Type="x:String" VerboseOutput="False" VerboseOutput_DisplayArg="" m_bTextLinkChange="False">
+          <p:IfObject.IfOption>
+            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="773,1000" Name="SequenceActivity">
+              <p:SequenceActivity.Activities>
+                <p:DownloadFileFromURL OverwriteExistingFile_Item="{x:Null}" OverwriteExistingFile_ItemProp="{x:Null}" RemoteFileURL_Item="{x:Null}" RemoteFileURL_ItemProp="{x:Null}" SaveAsFileName_Item="{x:Null}" SaveAsFileName_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" DisplayName="Download File From URL" sap:VirtualizedContainerService.HintSize="735,160" MinRequiredVersion="2.18.0.1" Moniker="83d084a1-96de-4fa3-b8da-96daa1c80555" OverwriteExistingFile="True" OverwriteExistingFile_DisplayArg="true" RemoteFileURL="https://github.com/PowerShell/PowerShell/releases/download/v7.2.0/PowerShell-7.2.0-win-x64.msi" RemoteFileURL_DisplayArg="https://github.com/PowerShell/PowerShell/releases/download/v7.2.0/PowerShell-7.2.0-win-x64.msi" Result="[DownloadFileFromURL_Result]" ResultString="[DownloadFileFromURL_ResultString]" RunAsCurrentLoggedOnUser="False" SaveAsFileName="C:\temp\PowerShell-7.2.0-win-x64.msi" SaveAsFileName_DisplayArg="C:\temp\PowerShell-7.2.0-win-x64.msi" ScriptExecutionMethod="None" TypeName="DownloadFileFromURL" m_bTextLinkChange="False" />
+                <p:Wait WaitTime_Item="{x:Null}" WaitTime_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" DisplayName="Wait" sap:VirtualizedContainerService.HintSize="735,88" MinRequiredVersion="2.10.0.19" Moniker="f6b5a848-c7b3-44b3-a8f8-a65ede8a55c5" Result="[Wait_Result]" ResultString="[Wait_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="Wait" WaitTime="45" WaitTime_DisplayArg="45" m_bTextLinkChange="False" />
+                <p:RunPowerShellScript genArgEvent="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="735,522" MinRequiredVersion="2.10.0.19" Moniker="e44c40e5-0467-418e-b110-ad0bc02068a7" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" m_bTextLinkChange="False" script="bQBzAGkAZQB4AGUAYwAuAGUAeABlACAALwBwAGEAYwBrAGEAZwBlACAAQwA6AFwAdABlAG0AcABcAFAAbwB3AGUAcgBTAGgAZQBsAGwALQA3AC4AMgAuADAALQB3AGkAbgAtAHgANgA0AC4AbQBzAGkAIAAvAHEAdQBpAGUAdAAgAEEARABEAF8ARQBYAFAATABPAFIARQBSAF8AQwBPAE4AVABFAFgAVABfAE0ARQBOAFUAXwBPAFAARQBOAFAATwBXAEUAUgBTAEgARQBMAEwAPQAxACAARQBOAEEAQgBMAEUAXwBQAFMAUgBFAE0ATwBUAEkATgBHAD0AMQAgAFIARQBHAEkAUwBUAEUAUgBfAE0AQQBOAEkARgBFAFMAVAA9ADEAIABVAFMARQBfAE0AVQA9ADEAIABFAE4AQQBCAEwARQBfAE0AVQA9ADEA">
+                  <p:RunPowerShellScript.InArgs>
+                    <scg:Dictionary x:TypeArguments="x:String, p:InArg" />
+                  </p:RunPowerShellScript.InArgs>
+                  <p:RunPowerShellScript.OutArgs>
+                    <scg:Dictionary x:TypeArguments="x:String, p:OutArg" />
+                  </p:RunPowerShellScript.OutArgs>
+                </p:RunPowerShellScript>
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable x:TypeArguments="x:String" Name="DownloadFileFromURL_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="DownloadFileFromURL_Result" />
+                <Variable x:TypeArguments="x:String" Name="Wait_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="Wait_Result" />
+                <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+                <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+                <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+                <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfObject.IfOption>
+          <p:IfObject.Value>
+            <InArgument x:TypeArguments="x:Object">
+              <p:ObjectLiteral Value="False" />
+            </InArgument>
+          </p:IfObject.Value>
+        </p:IfObject>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="FolderExists_Conditional" />
+        <Variable x:TypeArguments="x:String" Name="FolderExists_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="FolderExists_Result" />
+        <Variable x:TypeArguments="x:String" Name="FolderExists_Conditional_1" />
+        <Variable x:TypeArguments="x:String" Name="FolderExists_ResultString_1" />
+        <Variable x:TypeArguments="x:Double" Name="FolderExists_Result_1" />
+        <Variable x:TypeArguments="x:String" Name="IfObject_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="IfObject_Result" />
+        <Variable x:TypeArguments="x:String" Name="IfObject_ResultString_1" />
+        <Variable x:TypeArguments="x:Double" Name="IfObject_Result_1" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

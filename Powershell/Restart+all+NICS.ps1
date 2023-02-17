@@ -1,0 +1,2 @@
+Get-NetAdapter | Restart-NetAdapter
+

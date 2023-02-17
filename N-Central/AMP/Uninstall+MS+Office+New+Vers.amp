@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?><Policy Description="UG9saWN5IHRoYXQgdW5pbnN0YWxscyBvbGQgdmVyc2lvbnMgb2YgTVMgT2ZmaWNl" ExecutionType="Local" ID="9c62b3fc-ef1d-4628-bb60-4f77c59c82e7" Name="Uninstall MS Office Old Vers" PS3ObjectCount="0" RemoteCategory="0" Version="2.9.0.3">
+  <Object Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;ODTFile&quot; Label=&quot;ODT File&quot; ParameterType=&quot;string&quot; Value=&quot;C:\Temp\setup.exe&quot; /&gt;&lt;Parameter ParameterName=&quot;HomeBusinessRetailURL&quot; Label=&quot;URL for Home and Business Retail Uninstall&quot; ParameterType=&quot;string&quot; Value=&quot;https://admin-created-office365.s3.us-east-2.amazonaws.com/HomeBusinessRetail.xml&quot; /&gt;&lt;Parameter ParameterName=&quot;TempFolder&quot; Label=&quot;Location of the download installer&quot; ParameterType=&quot;string&quot; Value=&quot;C:\Temp&quot; /&gt;&lt;Parameter ParameterName=&quot;ODTUrl&quot; Label=&quot;URL for Office Deployment Tool&quot; ParameterType=&quot;string&quot; Value=&quot;https://admin-created-office365.s3.us-east-2.amazonaws.com/setup.exe&quot; /&gt;&lt;Parameter ParameterName=&quot;ProfessionalRetailUrl&quot; Label=&quot;URL for Pressional Retail Uninstall&quot; ParameterType=&quot;string&quot; Value=&quot;https://admin-created-office365.s3.us-east-2.amazonaws.com/ProfessionalRetail.xml&quot; /&gt;&lt;/Parameters&gt;&lt;/xml&gt;" ID="{ba38b1f1-a84e-47d9-9e8d-7a2ba1d4a92f}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}"/>
+  <LinkManager xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System"/>
+  </LinkManager>
+  <Activity xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" mc:Ignorable="sads sap" x:Class="Policy Builder">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)"/>
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>822,5363.33333333333</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" sap:VirtualizedContainerService.HintSize="822,5363.33333333333">
+      <p:PolicySequence.Activities>
+        <p:IsAppInstalled ApplicationName="Microsoft Office Home and Business 2016 - en-us" ApplicationName_DisplayArg="Microsoft Office Home and Business 2016 - en-us" ApplicationName_Item="{x:Null}" ApplicationName_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" Conditional="[IsAppInstalled_Conditional]" DisplayName="Is MS Office Home and Business 2016 Installed" Moniker="61b9a6ca-e832-45c5-9c3e-ed8a40ce2c79" Result="[IsAppInstalled_Result]" ResultString="[IsAppInstalled_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IsAppInstalled" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="786,88"/>
+        <p:IfObject AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" Condition="equals" Condition_DisplayArg="equals" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" DisplayName="If MS Office Home and Business 2016 Installed" Moniker="f6e839df-ae12-48e7-9b63-ed2b1d3a8729" Result="[IfObject_Result_1]" ResultString="[IfObject_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="True" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Value_Type="x:String" Variable="[IsAppInstalled_Conditional]" Variable_DisplayArg="Is MS Office Home and Business 2016 Installed.Conditional" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" Variable_Type="x:String" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="786,1558.66666666667">
+          <p:IfObject.IfOption>
+            <p:SequenceActivity DisplayName="Then" Name="SequenceActivity" sap:VirtualizedContainerService.HintSize="754,1358.66666666667">
+              <p:SequenceActivity.Activities>
+                <p:FormatString AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Format String LocalDownload Path ODT" FormattedString="[FormatString_FormattedString_1]" Input0="[TempFolder]" Input0_DisplayArg="Input Parameters.Location of the download installer" Input0_Item="{x:Null}" Input0_ItemProp="{x:Null}" Input1="{x:Null}" Input1_DisplayArg="{x:Null}" Input1_Item="{x:Null}" Input1_ItemProp="{x:Null}" Moniker="313eddb5-1eef-4994-b7ef-ce13b14be628" Result="[FormatString_Result_1]" ResultString="[FormatString_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Text="{}{0}\setup.exe" Text_DisplayArg="{}{0}\setup.exe" Text_Item="{x:Null}" Text_ItemProp="{x:Null}" TypeName="FormatString" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="716,160"/>
+                <p:FormatString AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Format String LocalDownloadPath Uninstall Home Business Retail Config File" FormattedString="[FormatString_FormattedString]" Input0="[TempFolder]" Input0_DisplayArg="Input Parameters.Location of the download installer" Input0_Item="{x:Null}" Input0_ItemProp="{x:Null}" Input1="{x:Null}" Input1_DisplayArg="{x:Null}" Input1_Item="{x:Null}" Input1_ItemProp="{x:Null}" Moniker="5bb4d9dd-ad98-490b-be70-f38709a4ec3c" Result="[FormatString_Result]" ResultString="[FormatString_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Text="{}{0}\HomeBusinessRetail.xml" Text_DisplayArg="{}{0}\HomeBusinessRetail.xml" Text_Item="{x:Null}" Text_ItemProp="{x:Null}" TypeName="FormatString" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="716,160"/>
+                <p:DownloadFileFromURL AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Download File From URL - ODT" Moniker="4944e369-59a1-44c0-af24-96d02bf05813" OverwriteExistingFile="True" OverwriteExistingFile_DisplayArg="true" OverwriteExistingFile_Item="{x:Null}" OverwriteExistingFile_ItemProp="{x:Null}" RemoteFileURL="[ODTUrl]" RemoteFileURL_DisplayArg="Input Parameters.URL for Office Deployment Tool" RemoteFileURL_Item="{x:Null}" RemoteFileURL_ItemProp="{x:Null}" Result="[DownloadFileFromURL_Result]" ResultString="[DownloadFileFromURL_ResultString]" RunAsCurrentLoggedOnUser="False" SaveAsFileName="[FormatString_FormattedString_1]" SaveAsFileName_DisplayArg="Format String LocalDownload Path ODT.FormattedString" SaveAsFileName_Item="{x:Null}" SaveAsFileName_ItemProp="{x:Null}" ScriptExecutionMethod="ExecuteDebug" TypeName="DownloadFileFromURL" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="716,160"/>
+                <p:DownloadFileFromURL AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Download File From URL - Office Home and Business 2016 Uninstall Config File" Moniker="24ff64c8-faca-471d-8b9f-cefffc5b311b" OverwriteExistingFile="True" OverwriteExistingFile_DisplayArg="true" OverwriteExistingFile_Item="{x:Null}" OverwriteExistingFile_ItemProp="{x:Null}" RemoteFileURL="[HomeBusinessRetailURL]" RemoteFileURL_DisplayArg="Input Parameters.URL for Home and Business Retail Uninstall" RemoteFileURL_Item="{x:Null}" RemoteFileURL_ItemProp="{x:Null}" Result="[DownloadFileFromURL_Result_1]" ResultString="[DownloadFileFromURL_ResultString_1]" RunAsCurrentLoggedOnUser="False" SaveAsFileName="[FormatString_FormattedString]" SaveAsFileName_DisplayArg="Format String LocalDownloadPath Uninstall Home Business Retail Config File.FormattedString" SaveAsFileName_Item="{x:Null}" SaveAsFileName_ItemProp="{x:Null}" ScriptExecutionMethod="ExecuteDebug" TypeName="DownloadFileFromURL" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="716,160"/>
+                <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script - Uninstall Office 2016 Home and Business" Moniker="6d8cbcaf-7908-467b-b876-a20e91089813" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="{x:Null}" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="716,80" script="UwBlAHQALQBMAG8AYwBhAHQAaQBvAG4AIAAiAEMAOgBcAFQAZQBtAHAAIgA7ACAALgBcAHMAZQB0AHUAcAAuAGUAeABlACAALwBjAG8AbgBmAGkAZwB1AHIAZQAgAEgAbwBtAGUAQgB1AHMAaQBuAGUAcwBzAFIAZQB0AGEAaQBsAC4AeABtAGwA">
+                  <p:RunPowerShellScript.InArgs>
+                    <scg:Dictionary x:TypeArguments="x:String, p:InArg"/>
+                  </p:RunPowerShellScript.InArgs>
+                  <p:RunPowerShellScript.OutArgs>
+                    <scg:Dictionary x:TypeArguments="x:String, p:OutArg"/>
+                  </p:RunPowerShellScript.OutArgs>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </p:RunPowerShellScript>
+                <p:DeleteFile AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Delete ODT File" FileName="C:\Temp\setup.exe" FileName_DisplayArg="C:\Temp\setup.exe" FileName_Item="{x:Null}" FileName_ItemProp="{x:Null}" Moniker="43400670-e751-4c6a-a6bb-8d4ecdc85aed" Recurse="True" Recurse_DisplayArg="" Recurse_Item="{x:Null}" Recurse_ItemProp="{x:Null}" Result="[DeleteFile_Result_1]" ResultString="[DeleteFile_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="DeleteFile" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="716,124"/>
+                <p:DeleteFile AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Delete Home Business Retail XML File" FileName="C:\Temp\HomeBusinessRetail.xml" FileName_DisplayArg="C:\Temp\HomeBusinessRetail.xml" FileName_Item="{x:Null}" FileName_ItemProp="{x:Null}" Moniker="db1842f2-7116-4f47-aa52-60204564efc2" Recurse="True" Recurse_DisplayArg="" Recurse_Item="{x:Null}" Recurse_ItemProp="{x:Null}" Result="[DeleteFile_Result]" ResultString="[DeleteFile_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="DeleteFile" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="716,124"/>
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable Name="FormatString_FormattedString_1" x:TypeArguments="x:String"/>
+                <Variable Name="FormatString_Result_1" x:TypeArguments="x:Double"/>
+                <Variable Name="FormatString_ResultString_1" x:TypeArguments="x:String"/>
+                <Variable Name="FormatString_FormattedString" x:TypeArguments="x:String"/>
+                <Variable Name="FormatString_Result" x:TypeArguments="x:Double"/>
+                <Variable Name="FormatString_ResultString" x:TypeArguments="x:String"/>
+                <Variable Name="DownloadFileFromURL_Result" x:TypeArguments="x:Double"/>
+                <Variable Name="DownloadFileFromURL_ResultString" x:TypeArguments="x:String"/>
+                <Variable Name="DownloadFileFromURL_Result_1" x:TypeArguments="x:Double"/>
+                <Variable Name="DownloadFileFromURL_ResultString_1" x:TypeArguments="x:String"/>
+                <Variable Name="RunPowerShellScript_OutPut_64" x:TypeArguments="x:String"/>
+                <Variable Name="RunPowerShellScript_Result" x:TypeArguments="x:Double"/>
+                <Variable Name="RunPowerShellScript_ResultString" x:TypeArguments="x:String"/>
+                <Variable Name="RunPowerShellScript_Results_x64" x:TypeArguments="scg:IEnumerable(x:Object)"/>
+                <Variable Name="DeleteFile_Result" x:TypeArguments="x:Double"/>
+                <Variable Name="DeleteFile_ResultString" x:TypeArguments="x:String"/>
+                <Variable Name="DeleteFile_Result_1" x:TypeArguments="x:Double"/>
+                <Variable Name="DeleteFile_ResultString_1" x:TypeArguments="x:String"/>
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfObject.IfOption>
+          <p:IfObject.Value>
+            <InArgument x:TypeArguments="x:Object">
+              <p:ObjectLiteral Value="True"/>
+            </InArgument>
+          </p:IfObject.Value>
+        </p:IfObject>
+        <p:IsAppInstalled ApplicationName="Microsoft Office Home and Business 2016 - en-us" ApplicationName_DisplayArg="Microsoft Office Home and Business 2016 - en-us" ApplicationName_Item="{x:Null}" ApplicationName_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" Conditional="[IsAppInstalled_Conditional_1]" DisplayName="Is MS Office Home and Business 2013 Installed" Moniker="fe449ac1-6a9d-450d-a62a-243645f88978" Result="[IsAppInstalled_Result_1]" ResultString="[IsAppInstalled_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IsAppInstalled" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="786,88"/>
+        <p:IfObject AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" Condition="equals" Condition_DisplayArg="equals" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" DisplayName="If MS Office Home and Business 2013 Exists" Moniker="32103f6d-0f69-4e0c-b0b0-8f77027b3895" Result="[IfObject_Result]" ResultString="[IfObject_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="True" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Value_Type="x:String" Variable="[IsAppInstalled_Conditional_1]" Variable_DisplayArg="Is MS Office Home and Business 2013 Installed.Conditional" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" Variable_Type="x:String" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="786,1558.66666666667">
+          <p:IfObject.IfOption>
+            <p:SequenceActivity DisplayName="Then" Name="SequenceActivity" sap:VirtualizedContainerService.HintSize="754,1358.66666666667">
+              <p:SequenceActivity.Activities>
+                <p:FormatString AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Format String LocalDownloadPath ODT" FormattedString="[FormatString_FormattedString_2]" Input0="[TempFolder]" Input0_DisplayArg="Input Parameters.Location of the download installer" Input0_Item="{x:Null}" Input0_ItemProp="{x:Null}" Input1="{x:Null}" Input1_DisplayArg="{x:Null}" Input1_Item="{x:Null}" Input1_ItemProp="{x:Null}" Moniker="c19062c5-109b-4352-b46f-33f1e1771ad6" Result="[FormatString_Result_2]" ResultString="[FormatString_ResultString_2]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Text="{}{0}\setup.exe" Text_DisplayArg="{}{0}\setup.exe" Text_Item="{x:Null}" Text_ItemProp="{x:Null}" TypeName="FormatString" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="716,160"/>
+                <p:FormatString AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Format String LocalDownloadPath Uninstall Home Business Retail Config File" FormattedString="[FormatString_FormattedString_3]" Input0="[TempFolder]" Input0_DisplayArg="Input Parameters.Location of the download installer" Input0_Item="{x:Null}" Input0_ItemProp="{x:Null}" Input1="{x:Null}" Input1_DisplayArg="{x:Null}" Input1_Item="{x:Null}" Input1_ItemProp="{x:Null}" Moniker="65a83ff3-f279-4be9-8c1e-f1301b9e506c" Result="[FormatString_Result_3]" ResultString="[FormatString_ResultString_3]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Text="{}{0}\HomeBusinessRetail.xml" Text_DisplayArg="{}{0}\HomeBusinessRetail.xml" Text_Item="{x:Null}" Text_ItemProp="{x:Null}" TypeName="FormatString" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="716,160"/>
+                <p:DownloadFileFromURL AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Download File From URL - ODT" Moniker="faf62087-e0ae-4772-a156-fe482345e7dd" OverwriteExistingFile="True" OverwriteExistingFile_DisplayArg="true" OverwriteExistingFile_Item="{x:Null}" OverwriteExistingFile_ItemProp="{x:Null}" RemoteFileURL="[ODTUrl]" RemoteFileURL_DisplayArg="Input Parameters.URL for Office Deployment Tool" RemoteFileURL_Item="{x:Null}" RemoteFileURL_ItemProp="{x:Null}" Result="[DownloadFileFromURL_Result_2]" ResultString="[DownloadFileFromURL_ResultString_2]" RunAsCurrentLoggedOnUser="False" SaveAsFileName="[FormatString_FormattedString_2]" SaveAsFileName_DisplayArg="Format String LocalDownloadPath ODT.FormattedString" SaveAsFileName_Item="{x:Null}" SaveAsFileName_ItemProp="{x:Null}" ScriptExecutionMethod="ExecuteDebug" TypeName="DownloadFileFromURL" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="716,160"/>
+                <p:DownloadFileFromURL AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Download File From URL - Office Home and Business 2013 Uninstall Config File" Moniker="02d98d32-b0c8-4c60-b3bf-d1b4fd2e882b" OverwriteExistingFile="True" OverwriteExistingFile_DisplayArg="true" OverwriteExistingFile_Item="{x:Null}" OverwriteExistingFile_ItemProp="{x:Null}" RemoteFileURL="[HomeBusinessRetailURL]" RemoteFileURL_DisplayArg="Input Parameters.URL for Home and Business Retail Uninstall" RemoteFileURL_Item="{x:Null}" RemoteFileURL_ItemProp="{x:Null}" Result="[DownloadFileFromURL_Result_3]" ResultString="[DownloadFileFromURL_ResultString_3]" RunAsCurrentLoggedOnUser="False" SaveAsFileName="[FormatString_FormattedString_3]" SaveAsFileName_DisplayArg="Format String LocalDownloadPath Uninstall Home Business Retail Config File.FormattedString" SaveAsFileName_Item="{x:Null}" SaveAsFileName_ItemProp="{x:Null}" ScriptExecutionMethod="ExecuteDebug" TypeName="DownloadFileFromURL" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="716,160"/>
+                <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script - Uninstall Office 2013 Home and Business" Moniker="be7b6c13-3e90-4a7d-96c4-97fa86176b5e" OutPut_64="[RunPowerShellScript_OutPut_64_1]" Result="[RunPowerShellScript_Result_1]" ResultString="[RunPowerShellScript_ResultString_1]" Results_x64="[RunPowerShellScript_Results_x64_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="{x:Null}" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="716,80" script="UwBlAHQALQBMAG8AYwBhAHQAaQBvAG4AIAAiAEMAOgBcAFQAZQBtAHAAIgA7ACAALgBcAHMAZQB0AHUAcAAuAGUAeABlACAALwBjAG8AbgBmAGkAZwB1AHIAZQAgAEgAbwBtAGUAQgB1AHMAaQBuAGUAcwBzAFIAZQB0AGEAaQBsAC4AeABtAGwA">
+                  <p:RunPowerShellScript.InArgs>
+                    <scg:Dictionary x:TypeArguments="x:String, p:InArg"/>
+                  </p:RunPowerShellScript.InArgs>
+                  <p:RunPowerShellScript.OutArgs>
+                    <scg:Dictionary x:TypeArguments="x:String, p:OutArg"/>
+                  </p:RunPowerShellScript.OutArgs>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </p:RunPowerShellScript>
+                <p:DeleteFile AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Delete ODT File" FileName="C:\Temp\setup.exe" FileName_DisplayArg="C:\Temp\setup.exe" FileName_Item="{x:Null}" FileName_ItemProp="{x:Null}" Moniker="d02ac12a-650e-414c-968c-015953ddbd16" Recurse="True" Recurse_DisplayArg="" Recurse_Item="{x:Null}" Recurse_ItemProp="{x:Null}" Result="[DeleteFile_Result_2]" ResultString="[DeleteFile_ResultString_2]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="DeleteFile" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="716,124"/>
+                <p:DeleteFile AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Delete Home Business Retail XML File" FileName="C:\Temp\HomeBusinessRetail.xml" FileName_DisplayArg="C:\Temp\HomeBusinessRetail.xml" FileName_Item="{x:Null}" FileName_ItemProp="{x:Null}" Moniker="bb39cd4a-7d89-4bf8-8fd2-f0db5cab2377" Recurse="True" Recurse_DisplayArg="" Recurse_Item="{x:Null}" Recurse_ItemProp="{x:Null}" Result="[DeleteFile_Result_3]" ResultString="[DeleteFile_ResultString_3]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="DeleteFile" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="716,124"/>
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable Name="FormatString_FormattedString_2" x:TypeArguments="x:String"/>
+                <Variable Name="FormatString_Result_2" x:TypeArguments="x:Double"/>
+                <Variable Name="FormatString_ResultString_2" x:TypeArguments="x:String"/>
+                <Variable Name="FormatString_FormattedString_3" x:TypeArguments="x:String"/>
+                <Variable Name="FormatString_Result_3" x:TypeArguments="x:Double"/>
+                <Variable Name="FormatString_ResultString_3" x:TypeArguments="x:String"/>
+                <Variable Name="DownloadFileFromURL_Result_2" x:TypeArguments="x:Double"/>
+                <Variable Name="DownloadFileFromURL_ResultString_2" x:TypeArguments="x:String"/>
+                <Variable Name="DownloadFileFromURL_Result_3" x:TypeArguments="x:Double"/>
+                <Variable Name="DownloadFileFromURL_ResultString_3" x:TypeArguments="x:String"/>
+                <Variable Name="RunPowerShellScript_OutPut_64_1" x:TypeArguments="x:String"/>
+                <Variable Name="RunPowerShellScript_Result_1" x:TypeArguments="x:Double"/>
+                <Variable Name="RunPowerShellScript_ResultString_1" x:TypeArguments="x:String"/>
+                <Variable Name="RunPowerShellScript_Results_x64_1" x:TypeArguments="scg:IEnumerable(x:Object)"/>
+                <Variable Name="DeleteFile_Result_2" x:TypeArguments="x:Double"/>
+                <Variable Name="DeleteFile_ResultString_2" x:TypeArguments="x:String"/>
+                <Variable Name="DeleteFile_Result_3" x:TypeArguments="x:Double"/>
+                <Variable Name="DeleteFile_ResultString_3" x:TypeArguments="x:String"/>
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfObject.IfOption>
+          <p:IfObject.Value>
+            <InArgument x:TypeArguments="x:Object">
+              <p:ObjectLiteral Value="True"/>
+            </InArgument>
+          </p:IfObject.Value>
+        </p:IfObject>
+        <p:IsAppInstalled ApplicationName="Microsoft Office Professional 2013 - en-us" ApplicationName_DisplayArg="Microsoft Office Professional 2013 - en-us" ApplicationName_Item="{x:Null}" ApplicationName_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" Conditional="[IsAppInstalled_Conditional_2]" DisplayName="Is MS Office 2013 Professional Installed" Moniker="add1c91c-01cc-4814-ab9a-e1a50f9ef1a7" Result="[IsAppInstalled_Result_2]" ResultString="[IsAppInstalled_ResultString_2]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IsAppInstalled" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="786,88"/>
+        <p:IfObject AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" Condition="equals" Condition_DisplayArg="equals" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" DisplayName="If MS Office 2013 Professional Installed" Moniker="95d0fcd7-3149-4474-97af-3a339b722aeb" Result="[IfObject_Result_2]" ResultString="[IfObject_ResultString_2]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="True" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Value_Type="x:String" Variable="[IsAppInstalled_Conditional_2]" Variable_DisplayArg="Is MS Office 2013 Professional Installed.Conditional" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" Variable_Type="x:String" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="786,1558.66666666667">
+          <p:IfObject.IfOption>
+            <p:SequenceActivity DisplayName="Then" Name="SequenceActivity" sap:VirtualizedContainerService.HintSize="736.666666666667,1358.66666666667">
+              <p:SequenceActivity.Activities>
+                <p:FormatString AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Format String LocalDownloadPath ODT" FormattedString="[FormatString_FormattedString_4]" Input0="[TempFolder]" Input0_DisplayArg="Input Parameters.Location of the download installer" Input0_Item="{x:Null}" Input0_ItemProp="{x:Null}" Input1="{x:Null}" Input1_DisplayArg="{x:Null}" Input1_Item="{x:Null}" Input1_ItemProp="{x:Null}" Moniker="8bad5977-7024-4692-830b-ddb2ebd5410f" Result="[FormatString_Result_4]" ResultString="[FormatString_ResultString_4]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Text="{}{0}\seup.exe" Text_DisplayArg="{}{0}\seup.exe" Text_Item="{x:Null}" Text_ItemProp="{x:Null}" TypeName="FormatString" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="698.666666666667,160"/>
+                <p:FormatString AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Format String LocalDownloadPath Uninstall Professional Retail Config File" FormattedString="[FormatString_FormattedString_5]" Input0="[TempFolder]" Input0_DisplayArg="Input Parameters.Location of the download installer" Input0_Item="{x:Null}" Input0_ItemProp="{x:Null}" Input1="{x:Null}" Input1_DisplayArg="{x:Null}" Input1_Item="{x:Null}" Input1_ItemProp="{x:Null}" Moniker="dfa795b9-da80-4b0b-ae3b-441933f04cdc" Result="[FormatString_Result_5]" ResultString="[FormatString_ResultString_5]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Text="{}{0}\ProfessionalRetail.xml" Text_DisplayArg="{}{0}\ProfessionalRetail.xml" Text_Item="{x:Null}" Text_ItemProp="{x:Null}" TypeName="FormatString" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="698.666666666667,160"/>
+                <p:DownloadFileFromURL AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Download File From URL - ODT" Moniker="de0cc251-ec6b-4d1d-9d4e-7c06388edbaa" OverwriteExistingFile="True" OverwriteExistingFile_DisplayArg="true" OverwriteExistingFile_Item="{x:Null}" OverwriteExistingFile_ItemProp="{x:Null}" RemoteFileURL="[ODTUrl]" RemoteFileURL_DisplayArg="Input Parameters.URL for Office Deployment Tool" RemoteFileURL_Item="{x:Null}" RemoteFileURL_ItemProp="{x:Null}" Result="[DownloadFileFromURL_Result_4]" ResultString="[DownloadFileFromURL_ResultString_4]" RunAsCurrentLoggedOnUser="False" SaveAsFileName="[FormatString_FormattedString_4]" SaveAsFileName_DisplayArg="Format String LocalDownloadPath ODT.FormattedString" SaveAsFileName_Item="{x:Null}" SaveAsFileName_ItemProp="{x:Null}" ScriptExecutionMethod="ExecuteDebug" TypeName="DownloadFileFromURL" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="698.666666666667,160"/>
+                <p:DownloadFileFromURL AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Download File From URL - LocalDownloadPath Uninstall Professional Retail Config File" Moniker="c3119c6f-e63a-4fa4-b214-cadc931e2cac" OverwriteExistingFile="True" OverwriteExistingFile_DisplayArg="true" OverwriteExistingFile_Item="{x:Null}" OverwriteExistingFile_ItemProp="{x:Null}" RemoteFileURL="[ProfessionalRetailUrl]" RemoteFileURL_DisplayArg="Input Parameters.URL for Pressional Retail Uninstall" RemoteFileURL_Item="{x:Null}" RemoteFileURL_ItemProp="{x:Null}" Result="[DownloadFileFromURL_Result_5]" ResultString="[DownloadFileFromURL_ResultString_5]" RunAsCurrentLoggedOnUser="False" SaveAsFileName="[FormatString_FormattedString_5]" SaveAsFileName_DisplayArg="Format String LocalDownloadPath Uninstall Professional Retail Config File.FormattedString" SaveAsFileName_Item="{x:Null}" SaveAsFileName_ItemProp="{x:Null}" ScriptExecutionMethod="ExecuteDebug" TypeName="DownloadFileFromURL" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="698.666666666667,160"/>
+                <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script - Uninstall Office 2013 Professional" Moniker="7c554eaf-68a2-49f9-b4c8-0f7bd666c8c7" OutPut_64="[RunPowerShellScript_OutPut_64_2]" Result="[RunPowerShellScript_Result_2]" ResultString="[RunPowerShellScript_ResultString_2]" Results_x64="[RunPowerShellScript_Results_x64_2]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="{x:Null}" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="698.666666666667,80" script="UwBlAHQALQBMAG8AYwBhAHQAaQBvAG4AIAAiAEMAOgBcAFQAZQBtAHAAIgA7ACAALgBcAHMAZQB0AHUAcAAuAGUAeABlACAALwBjAG8AbgBmAGkAZwB1AHIAZQAgAFAAcgBvAGYAZQBzAHMAaQBvAG4AYQBsAFIAZQB0AGEAaQBsAC4AeABtAGwA">
+                  <p:RunPowerShellScript.InArgs>
+                    <scg:Dictionary x:TypeArguments="x:String, p:InArg"/>
+                  </p:RunPowerShellScript.InArgs>
+                  <p:RunPowerShellScript.OutArgs>
+                    <scg:Dictionary x:TypeArguments="x:String, p:OutArg"/>
+                  </p:RunPowerShellScript.OutArgs>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </p:RunPowerShellScript>
+                <p:DeleteFile AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Delete ODT File" FileName="C:\Temp\setup.exe" FileName_DisplayArg="C:\Temp\setup.exe" FileName_Item="{x:Null}" FileName_ItemProp="{x:Null}" Moniker="fcc5e43e-b47d-4ee7-9205-b28da2f18cd0" Recurse="True" Recurse_DisplayArg="" Recurse_Item="{x:Null}" Recurse_ItemProp="{x:Null}" Result="[DeleteFile_Result_4]" ResultString="[DeleteFile_ResultString_4]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="DeleteFile" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="698.666666666667,124"/>
+                <p:DeleteFile AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Delete Professional Retail XML File" FileName="C:\Temp\ProfessionalRetail.xml" FileName_DisplayArg="C:\Temp\ProfessionalRetail.xml" FileName_Item="{x:Null}" FileName_ItemProp="{x:Null}" Moniker="34552a6b-19ef-4de3-86a4-68f91020eea8" Recurse="True" Recurse_DisplayArg="" Recurse_Item="{x:Null}" Recurse_ItemProp="{x:Null}" Result="[DeleteFile_Result_5]" ResultString="[DeleteFile_ResultString_5]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="DeleteFile" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="698.666666666667,124"/>
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable Name="FormatString_FormattedString_4" x:TypeArguments="x:String"/>
+                <Variable Name="FormatString_Result_4" x:TypeArguments="x:Double"/>
+                <Variable Name="FormatString_ResultString_4" x:TypeArguments="x:String"/>
+                <Variable Name="FormatString_FormattedString_5" x:TypeArguments="x:String"/>
+                <Variable Name="FormatString_Result_5" x:TypeArguments="x:Double"/>
+                <Variable Name="FormatString_ResultString_5" x:TypeArguments="x:String"/>
+                <Variable Name="DownloadFileFromURL_Result_4" x:TypeArguments="x:Double"/>
+                <Variable Name="DownloadFileFromURL_ResultString_4" x:TypeArguments="x:String"/>
+                <Variable Name="DownloadFileFromURL_Result_5" x:TypeArguments="x:Double"/>
+                <Variable Name="DownloadFileFromURL_ResultString_5" x:TypeArguments="x:String"/>
+                <Variable Name="RunPowerShellScript_OutPut_64_2" x:TypeArguments="x:String"/>
+                <Variable Name="RunPowerShellScript_Result_2" x:TypeArguments="x:Double"/>
+                <Variable Name="RunPowerShellScript_ResultString_2" x:TypeArguments="x:String"/>
+                <Variable Name="RunPowerShellScript_Results_x64_2" x:TypeArguments="scg:IEnumerable(x:Object)"/>
+                <Variable Name="DeleteFile_Result_4" x:TypeArguments="x:Double"/>
+                <Variable Name="DeleteFile_ResultString_4" x:TypeArguments="x:String"/>
+                <Variable Name="DeleteFile_Result_5" x:TypeArguments="x:Double"/>
+                <Variable Name="DeleteFile_ResultString_5" x:TypeArguments="x:String"/>
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfObject.IfOption>
+          <p:IfObject.Value>
+            <InArgument x:TypeArguments="x:Object">
+              <p:ObjectLiteral Value="True"/>
+            </InArgument>
+          </p:IfObject.Value>
+        </p:IfObject>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable Name="IsAppInstalled_Conditional" x:TypeArguments="x:String"/>
+        <Variable Name="IsAppInstalled_ResultString" x:TypeArguments="x:String"/>
+        <Variable Name="IsAppInstalled_Result" x:TypeArguments="x:Double"/>
+        <Variable Name="IfObject_Result_1" x:TypeArguments="x:Double"/>
+        <Variable Name="IfObject_ResultString_1" x:TypeArguments="x:String"/>
+        <Variable Name="IsAppInstalled_Conditional_1" x:TypeArguments="x:String"/>
+        <Variable Name="IsAppInstalled_Result_1" x:TypeArguments="x:Double"/>
+        <Variable Name="IsAppInstalled_ResultString_1" x:TypeArguments="x:String"/>
+        <Variable Name="IfObject_Result" x:TypeArguments="x:Double"/>
+        <Variable Name="IfObject_ResultString" x:TypeArguments="x:String"/>
+        <Variable Name="IsAppInstalled_Conditional_2" x:TypeArguments="x:String"/>
+        <Variable Name="IsAppInstalled_Result_2" x:TypeArguments="x:Double"/>
+        <Variable Name="IsAppInstalled_ResultString_2" x:TypeArguments="x:String"/>
+        <Variable Name="IfObject_Result_2" x:TypeArguments="x:Double"/>
+        <Variable Name="IfObject_ResultString_2" x:TypeArguments="x:String"/>
+        <Variable Default="C:\Temp\setup.exe" Name="ODTFile" x:TypeArguments="x:String"/>
+        <Variable Default="https://admin-created-office365.s3.us-east-2.amazonaws.com/HomeBusinessRetail.xml" Name="HomeBusinessRetailURL" x:TypeArguments="x:String"/>
+        <Variable Default="C:\Temp" Name="TempFolder" x:TypeArguments="x:String"/>
+        <Variable Default="https://admin-created-office365.s3.us-east-2.amazonaws.com/setup.exe" Name="ODTUrl" x:TypeArguments="x:String"/>
+        <Variable Default="https://admin-created-office365.s3.us-east-2.amazonaws.com/ProfessionalRetail.xml" Name="ProfessionalRetailUrl" x:TypeArguments="x:String"/>
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

@@ -1,0 +1,1 @@
+powershell.exe -File "A:\Scripts\BusyLight\new-mail.ps1"

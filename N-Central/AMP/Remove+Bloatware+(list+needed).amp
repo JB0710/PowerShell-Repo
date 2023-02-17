@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="2daebe44-8186-471d-b4e0-dbce6d317fc1" Name="Remove Bloatware (list needed)" Description="UmVtb3ZlIEJsb2F0d2FyZSAobGlzdCBuZWVkZWQp" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="3.0">
+  <Object ID="{e244bbee-76e8-43ac-bba2-95ee4c84e653}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;inblotware&quot; Label=&quot;bloatware list&quot; ParameterType=&quot;string&quot; Value=&quot;mcaffee;asus auto updater&quot; /&gt;&lt;/Parameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" />
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.18.1.1" />
+  <Activity mc:Ignorable="sap sads" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>792,1517</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="792,1517" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:SplitString Separator_Item="{x:Null}" Separator_ItemProp="{x:Null}" StringToSplit_Item="{x:Null}" StringToSplit_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.1, Culture=neutral, PublicKeyToken=null" DisplayName="Split String" sap:VirtualizedContainerService.HintSize="756,124" Moniker="48a58232-3c84-4093-a60d-7b24bab61ba6" Result="[SplitString_Result]" ResultString="[SplitString_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Separator=";" Separator_DisplayArg=";" StringToSplit="[inblotware]" StringToSplit_DisplayArg="Input Parameters.bloatware list" Tokens="[SplitString_Tokens]" TypeName="SplitString" m_bTextLinkChange="False" />
+        <p:SoftwareInventory AssemblyName="PolicyExecutionEngine, Version=2.18.1.1, Culture=neutral, PublicKeyToken=null" DisplayName="Software Inventory" sap:VirtualizedContainerService.HintSize="756,80" Moniker="72ad3ea4-8060-46a1-b7d9-e9afc1f405c6" Programs="[SoftwareInventory_Programs]" Result="[SoftwareInventory_Result]" ResultString="[SoftwareInventory_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="SoftwareInventory" m_bTextLinkChange="False" />
+        <p:ForEachLoop CollectionName_Item="{x:Null}" CollectionName_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.1, Culture=neutral, PublicKeyToken=null" CollectionName="[SoftwareInventory_Programs]" CollectionName_DisplayArg="Software Inventory.Programs" DisplayName="ForEach - installed app list" sap:VirtualizedContainerService.HintSize="756,1010" ItemValue="[ForEachLoop_ItemValue]" Moniker="7e6077df-fbc8-4058-9e98-39bdafb82c86" Result="[ForEachLoop_Result]" ResultString="[ForEachLoop_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="ForEachLoop" m_bTextLinkChange="False">
+          <p:ForEachLoop.Each>
+            <p:ForEachSequence DisplayName="Each" sap:VirtualizedContainerService.HintSize="724,910">
+              <p:ForEachSequence.Activities>
+                <p:ForEachLoop CollectionName_Item="{x:Null}" CollectionName_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.1, Culture=neutral, PublicKeyToken=null" CollectionName="[SplitString_Tokens]" CollectionName_DisplayArg="Split String.Tokens" DisplayName="ForEach - apps to find" sap:VirtualizedContainerService.HintSize="686,760" ItemValue="[ForEachLoop_ItemValue_1]" Moniker="c020ef42-448c-4a6e-a05f-d303e580a18f" Result="[ForEachLoop_Result_1]" ResultString="[ForEachLoop_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="ForEachLoop" m_bTextLinkChange="False">
+                  <p:ForEachLoop.Each>
+                    <p:ForEachSequence DisplayName="Each" sap:VirtualizedContainerService.HintSize="654,660">
+                      <p:ForEachSequence.Activities>
+                        <p:IfObject CaseSensitive_Item="{x:Null}" CaseSensitive_ItemProp="{x:Null}" Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value="{x:Null}" Variable="{x:Null}" VerboseOutput_Item="{x:Null}" VerboseOutput_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.1.1, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" Condition="contains" Condition_DisplayArg="contains" DisplayName="If" sap:VirtualizedContainerService.HintSize="616,510" Moniker="bf5d0e23-8cc5-4cae-a419-7c44e7f89a6f" Result="[IfObject_Result]" ResultString="[IfObject_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="ForEach - apps to find.Split String.Tokens.Value" Value_Item="[ForEachLoop_ItemValue_1]" Value_ItemProp="Value" Value_Type="x:String" Variable_DisplayArg="ForEach - installed app list.Software Inventory.Programs.Name" Variable_Item="[ForEachLoop_ItemValue]" Variable_ItemProp="Name" Variable_Type="x:String" VerboseOutput="False" VerboseOutput_DisplayArg="" m_bTextLinkChange="False">
+                          <p:IfObject.IfOption>
+                            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="584,238" Name="SequenceActivity">
+                              <p:SequenceActivity.Activities>
+                                <p:DeleteSoftware ApplicationName="{x:Null}" ApplicationName_DisplayArg="ForEach - installed app list.Software Inventory.Programs.Name" ApplicationName_Item="[ForEachLoop_ItemValue]" ApplicationName_ItemProp="Name" AssemblyName="PolicyExecutionEngine, Version=2.18.1.1, Culture=neutral, PublicKeyToken=null" DisplayName="Uninstall Software" sap:VirtualizedContainerService.HintSize="546,88" Moniker="fc6ffc18-eca0-4cfa-86cd-7daf2e24e7fe" Result="[DeleteSoftware_Result]" ResultString="[DeleteSoftware_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="DeleteSoftware" m_bTextLinkChange="False" />
+                              </p:SequenceActivity.Activities>
+                              <p:SequenceActivity.Variables>
+                                <Variable x:TypeArguments="x:String" Name="DeleteSoftware_ResultString" />
+                                <Variable x:TypeArguments="x:Double" Name="DeleteSoftware_Result" />
+                              </p:SequenceActivity.Variables>
+                            </p:SequenceActivity>
+                          </p:IfObject.IfOption>
+                        </p:IfObject>
+                      </p:ForEachSequence.Activities>
+                      <p:ForEachSequence.Variables>
+                        <Variable x:TypeArguments="x:Double" Name="IfObject_Result" />
+                        <Variable x:TypeArguments="x:String" Name="IfObject_ResultString" />
+                      </p:ForEachSequence.Variables>
+                    </p:ForEachSequence>
+                  </p:ForEachLoop.Each>
+                </p:ForEachLoop>
+              </p:ForEachSequence.Activities>
+              <p:ForEachSequence.Variables>
+                <Variable x:TypeArguments="x:Object" Name="ForEachLoop_ItemValue_1" />
+                <Variable x:TypeArguments="x:String" Name="ForEachLoop_ResultString_1" />
+                <Variable x:TypeArguments="x:Double" Name="ForEachLoop_Result_1" />
+              </p:ForEachSequence.Variables>
+            </p:ForEachSequence>
+          </p:ForEachLoop.Each>
+        </p:ForEachLoop>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Default="mcaffee;asus auto updater" Name="inblotware" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="SplitString_Tokens" />
+        <Variable x:TypeArguments="x:String" Name="SplitString_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="SplitString_Result" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="SoftwareInventory_Programs" />
+        <Variable x:TypeArguments="x:String" Name="SoftwareInventory_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="SoftwareInventory_Result" />
+        <Variable x:TypeArguments="x:Object" Name="ForEachLoop_ItemValue" />
+        <Variable x:TypeArguments="x:String" Name="ForEachLoop_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="ForEachLoop_Result" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

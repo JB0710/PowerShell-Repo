@@ -1,0 +1,1 @@
+netsh interface ip set address name="Internal NIC" static 172.16.0.250  255.255.0.0 172.16.0.1

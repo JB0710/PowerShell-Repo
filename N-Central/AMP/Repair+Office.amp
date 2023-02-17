@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="e7c9e8d4-6301-43be-adeb-3bcc10321aab" Name="Repair Office" Description="VGhpcyBBTVAgYWxsb3dzIGZvciBydW5uaW5nIGFuIHJlcGFpciBvbiBPZmZpY2UgaWYgYWNjZXB0ZWQgYnkgdGhlIHVzZXIuDQoNClJlcGFpclNlbGVjdG9yIE9wdGlvbnMNClF1aWNrIChQZWZvcm1zIE9mZmljZSBRdWljayBSZXBhaXIpDQpPbmxpbmUgKFBlZm9ybXMgT2ZmaWNlIE9ubGluZSBSZXBhaXIp" Version="2.19.0.1" MinRequiredVersion="2.19.0.1" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="3.0">
+  <Object ID="{7f7fc6a9-745c-46dc-af8c-d5e12e76e257}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;RepairSelector&quot; Label=&quot;RepairSelector&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;/Parameters&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;repairResult&quot; Label=&quot;repairResult&quot; ParameterType=&quot;string&quot; Value=&quot;Global Variables.resultVar&quot; /&gt;&lt;/OutputParameters&gt;&lt;GlobalVariables&gt;&lt;Parameter ParameterName=&quot;QuickRepairGlobalVar&quot; Label=&quot;QuickRepairGlobalVar&quot; ParameterType=&quot;string&quot; Value=&quot;Quick Repair was run successfully!&quot; /&gt;&lt;Parameter ParameterName=&quot;OnlineRepairGlobalVar&quot; Label=&quot;OnlineRepairGlobalVar&quot; ParameterType=&quot;string&quot; Value=&quot;Online Repair was run successfully!&quot; /&gt;&lt;Parameter ParameterName=&quot;resultVar&quot; Label=&quot;resultVar&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;/GlobalVariables&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>GlobalVariable.resultVar</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>repairResult</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.40.0.10" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>1900,2464.66666666667</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="1900,2464.66666666667" MinRequiredVersion="2.19.0.1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:PromptUser Prompt_ItemProp="{x:Null}" Title_ItemProp="{x:Null}" Type_ItemProp="{x:Null}" Wait_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" ClickResult="[PromptUser_ClickResult]" DisplayName="Prompt" sap:VirtualizedContainerService.HintSize="1864,196" MinRequiredVersion="2.10.0.19" Moniker="aff3aa83-cadf-4cdf-81bf-863dc03a8459" Prompt="Ziptech Support would like to run 'Repair Office'. This will forcibly close all open Microsoft Office Applications (Word, Excel, Outlook etc.). If accepted, please wait for a second prompt before using Office Applications again." Prompt_DisplayArg="Ziptech Support would like to run 'Repair Office'. This will forcibly close all open Microsoft Office Applications (Word, Excel, Outlook etc.). If accepted, please wait for a second prompt before using Office Applications again." Prompt_Item="{x:Null}" Result="[PromptUser_Result]" ResultString="[PromptUser_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" Title="Repair Office" Title_DisplayArg="Repair Office" Title_Item="{x:Null}" Type="4" TypeName="PromptUser" Type_DisplayArg="Yes, No" Type_Item="{x:Null}" Wait="300" Wait_DisplayArg="300" Wait_Item="{x:Null}" m_bTextLinkChange="False" />
+        <p:IfElse CaseSensitive_ItemProp="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.40.0.10, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" CaseSensitive_Item="{x:Null}" Condition="equals" Condition_DisplayArg="equals" Condition_Item="{x:Null}" DisplayName="If/Else" sap:VirtualizedContainerService.HintSize="1864,2005.33333333333" MinRequiredVersion="2.19.0.1" Moniker="e67bd85d-1255-428e-9046-407f44725c78" Result="[IfElse_Result]" ResultString="[IfElse_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfElse" Value_DisplayArg="Yes" Value_Type="x:String" Variable="[PromptUser_ClickResult]" Variable_DisplayArg="Prompt.Click Result" Variable_Item="{x:Null}" Variable_Type="x:String" m_bTextLinkChange="False">
+          <p:IfElse.ElseOption>
+            <p:SequenceActivity DisplayName="Else" sap:VirtualizedContainerService.HintSize="522.666666666667,496" Name="SequenceActivity">
+              <p:SequenceActivity.Activities>
+                <p:Assignment Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.40.0.10, Culture=neutral, PublicKeyToken=null" DisplayName="Global Variable Assignment" sap:VirtualizedContainerService.HintSize="484.666666666667,181.333333333333" MinRequiredVersion="2.10.0.19" Moniker="b9983f07-f181-454a-9f1c-2c3d1e568a15" Result="[Assignment_Result_2]" ResultString="[Assignment_ResultString_2]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="Assignment" Value_DisplayArg="User aborted 'Repair Office'. Office Quick Repair was not run." Value_Type="x:String" Variable="[resultVar]" Variable_DisplayArg="Global Variables.resultVar" Variable_Type="x:String" m_bTextLinkChange="False">
+                  <p:Assignment.Value>
+                    <InArgument x:TypeArguments="x:Object">
+                      <p:ObjectLiteral Value="User aborted 'Repair Office'. Office Quick Repair was not run." />
+                    </InArgument>
+                  </p:Assignment.Value>
+                </p:Assignment>
+                <p:StopPolicy CompletionResult_ItemProp="{x:Null}" StopReason_Item="{x:Null}" StopReason_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" CompletionResult="2" CompletionResult_DisplayArg="2" CompletionResult_Item="{x:Null}" DisplayName="Stop Policy" sap:VirtualizedContainerService.HintSize="484.666666666667,124" MinRequiredVersion="2.16.1.1" Moniker="52ebe150-77a8-4cbe-be6d-1e84ba9c9f7a" Result="[StopPolicy_Result]" ResultString="[StopPolicy_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" StopReason="[resultVar]" StopReason_DisplayArg="Global Variables.resultVar" TypeName="StopPolicy" m_bTextLinkChange="False" />
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable x:TypeArguments="x:String" Name="Assignment_ResultString_2" />
+                <Variable x:TypeArguments="x:Double" Name="Assignment_Result_2" />
+                <Variable x:TypeArguments="x:Double" Name="StopPolicy_Result" />
+                <Variable x:TypeArguments="x:String" Name="StopPolicy_ResultString" />
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfElse.ElseOption>
+          <p:IfElse.IfOption>
+            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="1297.33333333333,1768" Name="SequenceActivity">
+              <p:SequenceActivity.Activities>
+                <p:IfElse CaseSensitive_ItemProp="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.40.0.10, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" CaseSensitive_Item="{x:Null}" Condition="equals" Condition_DisplayArg="equals" Condition_Item="{x:Null}" DisplayName="If/Else" sap:VirtualizedContainerService.HintSize="1259.33333333333,1617.33333333333" MinRequiredVersion="2.19.0.1" Moniker="93aff6d5-f076-4ccd-9cfc-6d86c7af0051" Result="[IfElse_Result_1]" ResultString="[IfElse_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfElse" Value_DisplayArg="Quick" Value_Type="x:String" Variable="[RepairSelector]" Variable_DisplayArg="Input Parameters.RepairSelector" Variable_Item="{x:Null}" Variable_Type="x:String" m_bTextLinkChange="False">
+                  <p:IfElse.ElseOption>
+                    <p:SequenceActivity DisplayName="Else" sap:VirtualizedContainerService.HintSize="644.666666666667,1380" Name="SequenceActivity">
+                      <p:SequenceActivity.Activities>
+                        <p:IfObject CaseSensitive_ItemProp="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_ItemProp="{x:Null}" VerboseOutput_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.40.0.10, Culture=neutral, PublicKeyToken=null" CaseSensitive="False" CaseSensitive_DisplayArg="false" CaseSensitive_Item="{x:Null}" Condition="equals" Condition_DisplayArg="equals" Condition_Item="{x:Null}" DisplayName="If" sap:VirtualizedContainerService.HintSize="606.666666666667,1229.33333333333" MinRequiredVersion="2.19.0.1" Moniker="e6263f78-2171-4a7d-a322-e57d0847a2a5" Result="[IfObject_Result]" ResultString="[IfObject_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value_DisplayArg="Online" Value_Type="x:String" Variable="[RepairSelector]" Variable_DisplayArg="Input Parameters.RepairSelector" Variable_Item="{x:Null}" Variable_Type="x:String" VerboseOutput="False" VerboseOutput_DisplayArg="" VerboseOutput_Item="{x:Null}" m_bTextLinkChange="False">
+                          <p:IfObject.IfOption>
+                            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="574.666666666667,956" Name="SequenceActivity">
+                              <p:SequenceActivity.Activities>
+                                <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.40.0.10, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="536.666666666667,348" MinRequiredVersion="2.10.0.19" Moniker="54c3ec5e-16fd-48ea-961e-e5b0051363d3" OutPut_64="[RunPowerShellScript_OutPut_64_1]" Result="[RunPowerShellScript_Result_1]" ResultString="[RunPowerShellScript_ResultString_1]" Results_x64="[RunPowerShellScript_Results_x64_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="da0d2b8a-8c69-4dcc-9142-dba16a4314c9" m_bTextLinkChange="False" script="JABjAG8AbQBtAGEAbgBkADYANAAgAD0AIABAACcAIAANAAoAYwBtAGQALgBlAHgAZQAgAC8AQwAgACIAQwA6AFwAUAByAG8AZwByAGEAbQAgAEYAaQBsAGUAcwBcAE0AaQBjAHIAbwBzAG8AZgB0ACAATwBmAGYAaQBjAGUAIAAxADUAXABDAGwAaQBlAG4AdABYADYANABcAE8AZgBmAGkAYwBlAEMAbABpAGMAawBUAG8AUgB1AG4ALgBlAHgAZQAiACAAcwBjAGUAbgBhAHIAaQBvAD0AUgBlAHAAYQBpAHIAIABwAGwAYQB0AGYAbwByAG0APQB4ADYANAAgAGMAdQBsAHQAdQByAGUAPQBlAG4ALQB1AHMAIABSAGUAcABhAGkAcgBUAHkAcABlAD0ARgB1AGwAbABSAGUAcABhAGkAcgAgAGYAbwByAGMAZQBhAHAAcABzAGgAdQB0AGQAbwB3AG4APQBUAHIAdQBlACAARABpAHMAcABsAGEAeQBMAGUAdgBlAGwAPQBGAGEAbABzAGUADQAKACcAQAANAAoADQAKACQAYwBvAG0AbQBhAG4AZAA4ADYAIAA9ACAAQAAnACAADQAKAGMAbQBkAC4AZQB4AGUAIAAvAEMAIAAiAEMAOgBcAFAAcgBvAGcAcgBhAG0AIABGAGkAbABlAHMAXABNAGkAYwByAG8AcwBvAGYAdAAgAE8AZgBmAGkAYwBlACAAMQA1AFwAQwBsAGkAZQBuAHQAWAA4ADYAXABPAGYAZgBpAGMAZQBDAGwAaQBjAGsAVABvAFIAdQBuAC4AZQB4AGUAIgAgAHMAYwBlAG4AYQByAGkAbwA9AFIAZQBwAGEAaQByACAAcABsAGEAdABmAG8AcgBtAD0AeAA4ADYAIABjAHUAbAB0AHUAcgBlAD0AZQBuAC0AdQBzACAAUgBlAHAAYQBpAHIAVAB5AHAAZQA9AEYAdQBsAGwAUgBlAHAAYQBpAHIAIABmAG8AcgBjAGUAYQBwAHAAcwBoAHUAdABkAG8AdwBuAD0AVAByAHUAZQAgAEQAaQBzAHAAbABhAHkATABlAHYAZQBsAD0ARgBhAGwAcwBlAA0ACgAnAEAADQAKAA0ACgBpAGYAKABUAGUAcwB0AC0AUABhAHQAaAAgAC0AUABhAHQAaAAgACIAQwA6AFwAUAByAG8AZwByAGEAbQAgAEYAaQBsAGUAcwBcAE0AaQBjAHIAbwBzAG8AZgB0ACAATwBmAGYAaQBjAGUAIAAxADUAXABDAGwAaQBlAG4AdABYADYANABcAE8AZgBmAGkAYwBlAEMAbABpAGMAawBUAG8AUgB1AG4ALgBlAHgAZQAiACkAewANAAoAIAAgACAAIABJAG4AdgBvAGsAZQAtAEUAeABwAHIAZQBzAHMAaQBvAG4AIAAtAEMAbwBtAG0AYQBuAGQAOgAkAGMAbwBtAG0AYQBuAGQANgA0AA0ACgB9ACAAZQBsAHMAZQBpAGYAKABUAGUAcwB0AC0AUABBAHQAaAAgAC0AUABhAHQAaAAgACIAQwA6AFwAUAByAG8AZwByAGEAbQAgAEYAaQBsAGUAcwBcAE0AaQBjAHIAbwBzAG8AZgB0ACAATwBmAGYAaQBjAGUAIAAxADUAXABDAGwAaQBlAG4AdABYADMAMgBcAE8AZgBmAGkAYwBlAEMAbABpAGMAawBUAG8AUgB1AG4ALgBlAHgAZQAiACkAewANAAoAIAAgACAAIABJAG4AdgBvAGsAZQAtAEUAeABwAHIAZQBzAHMAaQBvAG4AIAAtAEMAbwBtAG0AYQBuAGQAOgAkAGMAbwBtAG0AYQBuAGQAOAA2AA0ACgB9AA0ACgAkAG8AbgBsAGkAbgBlAHIAZQBwAGEAaQByAE8AdQB0ACAAPQAgACIATwBuAGwAaQBuAGUAIABSAGUAcABhAGkAcgAgAHcAYQBzACAAUwB1AGMAZQBzAHMAZgB1AGwAbAB5ACAAUgB1AG4AIQAiAA==">
+                                  <p:RunPowerShellScript.InArgs>
+                                    <scg:Dictionary x:TypeArguments="x:String, p:InArg" />
+                                  </p:RunPowerShellScript.InArgs>
+                                  <p:RunPowerShellScript.OutArgs>
+                                    <p:OutArg x:Key="onlinerepairOut" ArgType="string" DisplayName="onlinerepairOut" Name="onlinerepairOut">
+                                      <p:OutArg.Arg>
+                                        <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_onlinerepairOut]</OutArgument>
+                                      </p:OutArg.Arg>
+                                    </p:OutArg>
+                                  </p:RunPowerShellScript.OutArgs>
+                                </p:RunPowerShellScript>
+                                <p:PromptUser Prompt_ItemProp="{x:Null}" Title_ItemProp="{x:Null}" Type_ItemProp="{x:Null}" Wait_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.40.0.10, Culture=neutral, PublicKeyToken=null" ClickResult="[PromptUser_ClickResult_2]" DisplayName="Prompt" sap:VirtualizedContainerService.HintSize="536.666666666667,196" MinRequiredVersion="2.10.0.19" Moniker="a13da07d-2783-4f21-9a2d-641c81407769" Prompt="Office Online Repair has finished running. You may use Office again." Prompt_DisplayArg="Office Online Repair has finished running. You may use Office again." Prompt_Item="{x:Null}" Result="[PromptUser_Result_2]" ResultString="[PromptUser_ResultString_2]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" Title="Repair Office" Title_DisplayArg="Repair Office" Title_Item="{x:Null}" Type="1" TypeName="PromptUser" Type_DisplayArg="OK, Cancel" Type_Item="{x:Null}" Wait="300" Wait_DisplayArg="300" Wait_Item="{x:Null}" m_bTextLinkChange="False" />
+                                <p:Assignment Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.40.0.10, Culture=neutral, PublicKeyToken=null" DisplayName="Global Variable Assignment" sap:VirtualizedContainerService.HintSize="536.666666666667,181.333333333333" MinRequiredVersion="2.10.0.19" Moniker="fd96a699-86da-459a-9123-b0acea8dcbb0" Result="[Assignment_Result_1]" ResultString="[Assignment_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="Assignment" Value="[RunPowerShellScript_onlinerepairOut]" Value_DisplayArg="Run PowerShell Script.onlinerepairOut" Value_Type="x:String" Variable="[resultVar]" Variable_DisplayArg="Global Variables.resultVar" Variable_Type="x:String" m_bTextLinkChange="False" />
+                              </p:SequenceActivity.Activities>
+                              <p:SequenceActivity.Variables>
+                                <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64_1" />
+                                <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result_1" />
+                                <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString_1" />
+                                <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64_1" />
+                                <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_onlinerepairOut" />
+                                <Variable x:TypeArguments="x:String" Name="PromptUser_ClickResult_2" />
+                                <Variable x:TypeArguments="x:Double" Name="PromptUser_Result_2" />
+                                <Variable x:TypeArguments="x:String" Name="PromptUser_ResultString_2" />
+                                <Variable x:TypeArguments="x:String" Name="Assignment_ResultString_1" />
+                                <Variable x:TypeArguments="x:Double" Name="Assignment_Result_1" />
+                              </p:SequenceActivity.Variables>
+                            </p:SequenceActivity>
+                          </p:IfObject.IfOption>
+                          <p:IfObject.Value>
+                            <InArgument x:TypeArguments="x:Object">
+                              <p:ObjectLiteral Value="Online" />
+                            </InArgument>
+                          </p:IfObject.Value>
+                        </p:IfObject>
+                      </p:SequenceActivity.Activities>
+                      <p:SequenceActivity.Variables>
+                        <Variable x:TypeArguments="x:String" Name="IfObject_ResultString" />
+                        <Variable x:TypeArguments="x:Double" Name="IfObject_Result" />
+                      </p:SequenceActivity.Variables>
+                    </p:SequenceActivity>
+                  </p:IfElse.ElseOption>
+                  <p:IfElse.IfOption>
+                    <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="570.666666666667,956" Name="SequenceActivity">
+                      <p:SequenceActivity.Activities>
+                        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.40.0.10, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="532.666666666667,348" MinRequiredVersion="2.10.0.19" Moniker="7648aabc-684e-4cba-bd94-dd62f298e1a6" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="68652cc4-febc-43ec-9016-eeeff7b387f1" m_bTextLinkChange="False" script="JABjAG8AbQBtAGEAbgBkADYANAAgAD0AIABAACcAIAANAAoAYwBtAGQALgBlAHgAZQAgAC8AQwAgACIAQwA6AFwAUAByAG8AZwByAGEAbQAgAEYAaQBsAGUAcwBcAE0AaQBjAHIAbwBzAG8AZgB0ACAATwBmAGYAaQBjAGUAIAAxADUAXABDAGwAaQBlAG4AdABYADYANABcAE8AZgBmAGkAYwBlAEMAbABpAGMAawBUAG8AUgB1AG4ALgBlAHgAZQAiACAAcwBjAGUAbgBhAHIAaQBvAD0AUgBlAHAAYQBpAHIAIABwAGwAYQB0AGYAbwByAG0APQB4ADYANAAgAGMAdQBsAHQAdQByAGUAPQBlAG4ALQB1AHMAIABSAGUAcABhAGkAcgBUAHkAcABlAD0AUQB1AGkAYwBrAFIAZQBwAGEAaQByACAAZgBvAHIAYwBlAGEAcABwAHMAaAB1AHQAZABvAHcAbgA9AFQAcgB1AGUAIABEAGkAcwBwAGwAYQB5AEwAZQB2AGUAbAA9AEYAYQBsAHMAZQANAAoAJwBAAA0ACgANAAoAJABjAG8AbQBtAGEAbgBkADgANgAgAD0AIABAACcAIAANAAoAYwBtAGQALgBlAHgAZQAgAC8AQwAgACIAQwA6AFwAUAByAG8AZwByAGEAbQAgAEYAaQBsAGUAcwBcAE0AaQBjAHIAbwBzAG8AZgB0ACAATwBmAGYAaQBjAGUAIAAxADUAXABDAGwAaQBlAG4AdABYADgANgBcAE8AZgBmAGkAYwBlAEMAbABpAGMAawBUAG8AUgB1AG4ALgBlAHgAZQAiACAAcwBjAGUAbgBhAHIAaQBvAD0AUgBlAHAAYQBpAHIAIABwAGwAYQB0AGYAbwByAG0APQB4ADgANgAgAGMAdQBsAHQAdQByAGUAPQBlAG4ALQB1AHMAIABSAGUAcABhAGkAcgBUAHkAcABlAD0AUQB1AGkAYwBrAFIAZQBwAGEAaQByACAAZgBvAHIAYwBlAGEAcABwAHMAaAB1AHQAZABvAHcAbgA9AFQAcgB1AGUAIABEAGkAcwBwAGwAYQB5AEwAZQB2AGUAbAA9AEYAYQBsAHMAZQANAAoAJwBAAA0ACgANAAoAaQBmACgAVABlAHMAdAAtAFAAYQB0AGgAIAAtAFAAYQB0AGgAIAAiAEMAOgBcAFAAcgBvAGcAcgBhAG0AIABGAGkAbABlAHMAXABNAGkAYwByAG8AcwBvAGYAdAAgAE8AZgBmAGkAYwBlACAAMQA1AFwAQwBsAGkAZQBuAHQAWAA2ADQAXABPAGYAZgBpAGMAZQBDAGwAaQBjAGsAVABvAFIAdQBuAC4AZQB4AGUAIgApAHsADQAKACAAIAAgACAASQBuAHYAbwBrAGUALQBFAHgAcAByAGUAcwBzAGkAbwBuACAALQBDAG8AbQBtAGEAbgBkADoAJABjAG8AbQBtAGEAbgBkADYANAANAAoAfQAgAGUAbABzAGUAaQBmACgAVABlAHMAdAAtAFAAQQB0AGgAIAAtAFAAYQB0AGgAIAAiAEMAOgBcAFAAcgBvAGcAcgBhAG0AIABGAGkAbABlAHMAXABNAGkAYwByAG8AcwBvAGYAdAAgAE8AZgBmAGkAYwBlACAAMQA1AFwAQwBsAGkAZQBuAHQAWAAzADIAXABPAGYAZgBpAGMAZQBDAGwAaQBjAGsAVABvAFIAdQBuAC4AZQB4AGUAIgApAHsADQAKACAAIAAgACAASQBuAHYAbwBrAGUALQBFAHgAcAByAGUAcwBzAGkAbwBuACAALQBDAG8AbQBtAGEAbgBkADoAJABjAG8AbQBtAGEAbgBkADgANgANAAoAfQANAAoAJABxAHUAaQBjAGsAcgBlAHAAYQBpAHIATwB1AHQAIAA9ACAAIgBRAHUAaQBjAGsAIABSAGUAcABhAGkAcgAgAHcAYQBzACAAUwB1AGMAZQBzAHMAZgB1AGwAbAB5ACAAUgB1AG4AIQAiAA==">
+                          <p:RunPowerShellScript.InArgs>
+                            <scg:Dictionary x:TypeArguments="x:String, p:InArg" />
+                          </p:RunPowerShellScript.InArgs>
+                          <p:RunPowerShellScript.OutArgs>
+                            <p:OutArg x:Key="quickrepairOut" ArgType="string" DisplayName="quickrepairOut" Name="quickrepairOut">
+                              <p:OutArg.Arg>
+                                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_quickrepairOut]</OutArgument>
+                              </p:OutArg.Arg>
+                            </p:OutArg>
+                          </p:RunPowerShellScript.OutArgs>
+                        </p:RunPowerShellScript>
+                        <p:PromptUser Prompt_ItemProp="{x:Null}" Title_ItemProp="{x:Null}" Type_ItemProp="{x:Null}" Wait_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" ClickResult="[PromptUser_ClickResult_1]" DisplayName="Prompt" sap:VirtualizedContainerService.HintSize="532.666666666667,196" MinRequiredVersion="2.10.0.19" Moniker="c3786a75-0579-43ae-b309-44c401945c51" Prompt="Office Quick Repair has finished running. You may use Office again." Prompt_DisplayArg="Office Quick Repair has finished running. You may use Office again." Prompt_Item="{x:Null}" Result="[PromptUser_Result_1]" ResultString="[PromptUser_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" Title="Repair Office" Title_DisplayArg="Repair Office" Title_Item="{x:Null}" Type="1" TypeName="PromptUser" Type_DisplayArg="OK, Cancel" Type_Item="{x:Null}" Wait="300" Wait_DisplayArg="300" Wait_Item="{x:Null}" m_bTextLinkChange="False" />
+                        <p:Assignment Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.40.0.10, Culture=neutral, PublicKeyToken=null" DisplayName="Global Variable Assignment" sap:VirtualizedContainerService.HintSize="532.666666666667,181.333333333333" MinRequiredVersion="2.10.0.19" Moniker="98ee3e89-3357-4814-8358-0ad56170c3f2" Result="[Assignment_Result]" ResultString="[Assignment_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="Assignment" Value="[RunPowerShellScript_quickrepairOut]" Value_DisplayArg="Run PowerShell Script.quickrepairOut" Value_Type="x:String" Variable="[resultVar]" Variable_DisplayArg="Global Variables.resultVar" Variable_Type="x:String" m_bTextLinkChange="False" />
+                      </p:SequenceActivity.Activities>
+                      <p:SequenceActivity.Variables>
+                        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+                        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+                        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+                        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+                        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_quickrepairOut" />
+                        <Variable x:TypeArguments="x:String" Name="PromptUser_ClickResult_1" />
+                        <Variable x:TypeArguments="x:Double" Name="PromptUser_Result_1" />
+                        <Variable x:TypeArguments="x:String" Name="PromptUser_ResultString_1" />
+                        <Variable x:TypeArguments="x:String" Name="Assignment_ResultString" />
+                        <Variable x:TypeArguments="x:Double" Name="Assignment_Result" />
+                      </p:SequenceActivity.Variables>
+                    </p:SequenceActivity>
+                  </p:IfElse.IfOption>
+                  <p:IfElse.Value>
+                    <InArgument x:TypeArguments="x:Object">
+                      <p:ObjectLiteral Value="Quick" />
+                    </InArgument>
+                  </p:IfElse.Value>
+                </p:IfElse>
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable x:TypeArguments="x:Double" Name="IfElse_Result_1" />
+                <Variable x:TypeArguments="x:String" Name="IfElse_ResultString_1" />
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:IfElse.IfOption>
+          <p:IfElse.Value>
+            <InArgument x:TypeArguments="x:Object">
+              <p:ObjectLiteral Value="Yes" />
+            </InArgument>
+          </p:IfElse.Value>
+        </p:IfElse>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="PromptUser_ClickResult" />
+        <Variable x:TypeArguments="x:String" Name="PromptUser_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="PromptUser_Result" />
+        <Variable x:TypeArguments="x:Double" Name="IfElse_Result" />
+        <Variable x:TypeArguments="x:String" Name="IfElse_ResultString" />
+        <Variable x:TypeArguments="x:String" Default="Quick" Name="RepairSelector" />
+        <Variable x:TypeArguments="x:String" Default="Quick Repair was run successfully!" Name="QuickRepairGlobalVar" />
+        <Variable x:TypeArguments="x:String" Default="Online Repair was run successfully!" Name="OnlineRepairGlobalVar" />
+        <Variable x:TypeArguments="x:String" Name="resultVar" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

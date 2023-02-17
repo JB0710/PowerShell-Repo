@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="ccd5ff4f-92ac-4f10-8043-fa8376b44c07" Name="UninstallSoftware" Description="VW5pbnN0YWxsIFNvZnR3YXJlIGJhc2VkIG9uIGVpdGhlciBQYXJ0aWFsIG9yIE1hdGNoZWQgTmFtZQ==" Version="2.9.0.3" RemoteCategory="0" ExecutionType="Local" PS3ObjectCount="0">
+  <Object ID="{638f366e-db3e-4e5d-a378-04b98b4451c4}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;AppName&quot; Label=&quot;App Name to Uninistall&quot; ParameterType=&quot;string&quot; Value=&quot;adobe acrobat reader dc&quot; /&gt;&lt;Parameter ParameterName=&quot;partialorfull&quot; Label=&quot;Enter MATCH for matched name or CONTAINS to check for partially entered app name&quot; ParameterType=&quot;string&quot; Value=&quot;MATCH / CONTAINS&quot; /&gt;&lt;/Parameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" />
+  </LinkManager>
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>1048,3135</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="1048,3135" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:SwitchObject AllowDefault_ItemProp="{x:Null}" Variable_ItemProp="{x:Null}" AllowDefault="True" AllowDefault_DisplayArg="true" AllowDefault_Item="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="1012,2912" Moniker="e2cb3bd8-d96b-4b62-b554-f638639f6f1d" Result="[SwitchObject_Result]" ResultString="[SwitchObject_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="SwitchObject" Variable="[partialorfull]" Variable_DisplayArg="Input Parameters.Enter MATCH for matched name or CONTAINS to check for partially entered app name" Variable_Item="{x:Null}" Variable_Type="x:String" m_bTextLinkChange="False">
+          <p:SwitchObject.CaseSequence>
+            <p:CaseSequenceActivity DisplayName="" sap:VirtualizedContainerService.HintSize="980,2337" Name="CaseSequenceActivity">
+              <p:CaseSequenceActivity.Activities>
+                <p:CaseObject Value_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Case" sap:VirtualizedContainerService.HintSize="974,1073" Moniker="46d62679-dedc-421d-a80b-4195bebbe82d" Result="[CaseObject_Result_1]" ResultString="[CaseObject_ResultString_1]" RunAsCurrentLoggedOnUser="False" RunCase="False" ScriptExecutionMethod="None" TypeName="CaseObject" ValidationError="" Value_DisplayArg="MATCH" Value_Item="{x:Null}" Value_Type="x:String" m_bTextLinkChange="False">
+                  <p:CaseObject.ThenOption>
+                    <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="942,973" Name="SequenceActivity">
+                      <p:SequenceActivity.Activities>
+                        <p:Log Message_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Log" sap:VirtualizedContainerService.HintSize="904,88" LogMessage="[Log_LogMessage]" Message="Will look for exact application name matching the entered app name" Message_DisplayArg="Will look for exact application name matching the entered app name" Message_Item="{x:Null}" Moniker="357c6885-a032-4b1b-b6dc-f2dc0fedc97a" Result="[Log_Result]" ResultString="[Log_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="Log" m_bTextLinkChange="False" />
+                        <p:IsAppInstalled ApplicationName_Item="{x:Null}" ApplicationName_ItemProp="{x:Null}" ApplicationName="[AppName]" ApplicationName_DisplayArg="Input Parameters.App Name to Uninistall" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" Conditional="[IsAppInstalled_Conditional]" DisplayName="Is Application Installed" sap:VirtualizedContainerService.HintSize="904,88" Moniker="197059d8-5ca4-4406-a712-bd0bb169d508" Result="[IsAppInstalled_Result]" ResultString="[IsAppInstalled_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IsAppInstalled" m_bTextLinkChange="False" />
+                        <p:IfElse Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" Condition="equals" Condition_DisplayArg="equals" DisplayName="If/Else" sap:VirtualizedContainerService.HintSize="904,567" Moniker="c2724100-298d-44a0-aac5-27013c76bd71" Result="[IfElse_Result]" ResultString="[IfElse_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfElse" Value_DisplayArg="True" Value_Type="x:String" Variable="[IsAppInstalled_Conditional]" Variable_DisplayArg="Is Application Installed.Conditional" Variable_Type="x:String" m_bTextLinkChange="False">
+                          <p:IfElse.ElseOption>
+                            <p:SequenceActivity DisplayName="Else" sap:VirtualizedContainerService.HintSize="397,238" Name="SequenceActivity">
+                              <p:SequenceActivity.Activities>
+                                <p:Log Message_Item="{x:Null}" Message_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Log" sap:VirtualizedContainerService.HintSize="359,88" LogMessage="[Log_LogMessage_4]" Message="App Not Found. No Action Taken" Message_DisplayArg="App Not Found. No Action Taken" Moniker="5011b76b-0e51-47a0-bde3-fa1461897607" Result="[Log_Result_4]" ResultString="[Log_ResultString_4]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="Log" m_bTextLinkChange="False" />
+                              </p:SequenceActivity.Activities>
+                              <p:SequenceActivity.Variables>
+                                <Variable x:TypeArguments="x:String" Name="Log_LogMessage_4" />
+                                <Variable x:TypeArguments="x:Double" Name="Log_Result_4" />
+                                <Variable x:TypeArguments="x:String" Name="Log_ResultString_4" />
+                              </p:SequenceActivity.Variables>
+                            </p:SequenceActivity>
+                          </p:IfElse.ElseOption>
+                          <p:IfElse.IfOption>
+                            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="463,366" Name="SequenceActivity">
+                              <p:SequenceActivity.Activities>
+                                <p:Log Message_Item="{x:Null}" Message_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Log" sap:VirtualizedContainerService.HintSize="425,88" LogMessage="[Log_LogMessage_3]" Message="App Found. Uninstalling" Message_DisplayArg="App Found. Uninstalling" Moniker="feeeb7a4-317c-43c3-80c8-b0e1ba0c9cd2" Result="[Log_Result_3]" ResultString="[Log_ResultString_3]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="Log" m_bTextLinkChange="False" />
+                                <p:DeleteSoftware ApplicationName_Item="{x:Null}" ApplicationName_ItemProp="{x:Null}" ApplicationName="[AppName]" ApplicationName_DisplayArg="Input Parameters.App Name to Uninistall" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Uninstall Software" sap:VirtualizedContainerService.HintSize="425,88" Moniker="1a086f56-ef0c-4d17-9787-3981c69a2312" Result="[DeleteSoftware_Result]" ResultString="[DeleteSoftware_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="DeleteSoftware" m_bTextLinkChange="False" />
+                              </p:SequenceActivity.Activities>
+                              <p:SequenceActivity.Variables>
+                                <Variable x:TypeArguments="x:String" Name="Log_LogMessage_3" />
+                                <Variable x:TypeArguments="x:Double" Name="Log_Result_3" />
+                                <Variable x:TypeArguments="x:String" Name="Log_ResultString_3" />
+                                <Variable x:TypeArguments="x:String" Name="DeleteSoftware_ResultString" />
+                                <Variable x:TypeArguments="x:Double" Name="DeleteSoftware_Result" />
+                              </p:SequenceActivity.Variables>
+                            </p:SequenceActivity>
+                          </p:IfElse.IfOption>
+                          <p:IfElse.Value>
+                            <InArgument x:TypeArguments="x:Object">
+                              <p:ObjectLiteral Value="True" />
+                            </InArgument>
+                          </p:IfElse.Value>
+                        </p:IfElse>
+                      </p:SequenceActivity.Activities>
+                      <p:SequenceActivity.Variables>
+                        <Variable x:TypeArguments="x:String" Name="Log_LogMessage" />
+                        <Variable x:TypeArguments="x:Double" Name="Log_Result" />
+                        <Variable x:TypeArguments="x:String" Name="Log_ResultString" />
+                        <Variable x:TypeArguments="x:String" Name="IsAppInstalled_Conditional" />
+                        <Variable x:TypeArguments="x:String" Name="IsAppInstalled_ResultString" />
+                        <Variable x:TypeArguments="x:Double" Name="IsAppInstalled_Result" />
+                        <Variable x:TypeArguments="x:Double" Name="IfElse_Result" />
+                        <Variable x:TypeArguments="x:String" Name="IfElse_ResultString" />
+                      </p:SequenceActivity.Variables>
+                    </p:SequenceActivity>
+                  </p:CaseObject.ThenOption>
+                  <p:CaseObject.Value>
+                    <InArgument x:TypeArguments="x:Object">
+                      <p:ObjectLiteral Result="{x:Null}" Value="MATCH" />
+                    </InArgument>
+                  </p:CaseObject.Value>
+                </p:CaseObject>
+                <p:CaseObject Value_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Case" sap:VirtualizedContainerService.HintSize="974,1188" Moniker="7524f0fb-9100-4adf-8838-afa01224ed67" Result="[CaseObject_Result]" ResultString="[CaseObject_ResultString]" RunAsCurrentLoggedOnUser="False" RunCase="False" ScriptExecutionMethod="None" TypeName="CaseObject" ValidationError="" Value_DisplayArg="CONTAINS" Value_Item="{x:Null}" Value_Type="x:String" m_bTextLinkChange="False">
+                  <p:CaseObject.ThenOption>
+                    <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="627,1088" Name="SequenceActivity">
+                      <p:SequenceActivity.Activities>
+                        <p:Log Message_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Log" sap:VirtualizedContainerService.HintSize="589,88" LogMessage="[Log_LogMessage_1]" Message="Will search through apps installed for any app that contains the input app name" Message_DisplayArg="Will search through apps installed for any app that contains the input app name" Message_Item="{x:Null}" Moniker="8a24572c-bb09-4e7a-975a-5f48e2f215d4" Result="[Log_Result_1]" ResultString="[Log_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="Log" m_bTextLinkChange="False" />
+                        <p:SoftwareInventory AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Software Inventory" sap:VirtualizedContainerService.HintSize="589,81" Moniker="c58b1d3f-a3e8-4bf3-84f8-0dbeeaf0ff7f" Programs="[SoftwareInventory_Programs]" Result="[SoftwareInventory_Result]" ResultString="[SoftwareInventory_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="SoftwareInventory" m_bTextLinkChange="False" />
+                        <p:ForEachLoop CollectionName_Item="{x:Null}" CollectionName_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" CollectionName="[SoftwareInventory_Programs]" CollectionName_DisplayArg="Software Inventory.Programs" DisplayName="ForEach" sap:VirtualizedContainerService.HintSize="589,689" ItemValue="[ForEachLoop_ItemValue]" Moniker="7dcd6c4a-5cc8-4aa8-9e55-eda6e62ab180" Result="[ForEachLoop_Result]" ResultString="[ForEachLoop_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="ForEachLoop" m_bTextLinkChange="False">
+                          <p:ForEachLoop.Each>
+                            <p:ForEachSequence DisplayName="Each" sap:VirtualizedContainerService.HintSize="553,589">
+                              <p:ForEachSequence.Activities>
+                                <p:IfObject Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" Condition="contains" Condition_DisplayArg="contains" DisplayName="If" sap:VirtualizedContainerService.HintSize="515,439" Moniker="b86a778b-df48-4ec5-bbc3-ae6a5905ad81" Result="[IfObject_Result]" ResultString="[IfObject_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfObject" Value="[AppName]" Value_DisplayArg="Input Parameters.App Name to Uninistall" Value_Type="x:String" Variable_DisplayArg="ForEach.Software Inventory.Programs.Name" Variable_Item="[ForEachLoop_ItemValue]" Variable_ItemProp="Name" Variable_Type="x:String" m_bTextLinkChange="False">
+                                  <p:IfObject.IfOption>
+                                    <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="483,238" Name="SequenceActivity">
+                                      <p:SequenceActivity.Activities>
+                                        <p:DeleteSoftware ApplicationName="{x:Null}" ApplicationName_DisplayArg="ForEach.Software Inventory.Programs.Name" ApplicationName_Item="[ForEachLoop_ItemValue]" ApplicationName_ItemProp="Name" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Uninstall Software" sap:VirtualizedContainerService.HintSize="445,88" Moniker="24853b11-1bec-414b-9f23-cf75a04c8b26" Result="[DeleteSoftware_Result_1]" ResultString="[DeleteSoftware_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="DeleteSoftware" m_bTextLinkChange="False" />
+                                      </p:SequenceActivity.Activities>
+                                      <p:SequenceActivity.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="DeleteSoftware_ResultString_1" />
+                                        <Variable x:TypeArguments="x:Double" Name="DeleteSoftware_Result_1" />
+                                      </p:SequenceActivity.Variables>
+                                    </p:SequenceActivity>
+                                  </p:IfObject.IfOption>
+                                </p:IfObject>
+                              </p:ForEachSequence.Activities>
+                              <p:ForEachSequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="IfObject_ResultString" />
+                                <Variable x:TypeArguments="x:Double" Name="IfObject_Result" />
+                              </p:ForEachSequence.Variables>
+                            </p:ForEachSequence>
+                          </p:ForEachLoop.Each>
+                        </p:ForEachLoop>
+                      </p:SequenceActivity.Activities>
+                      <p:SequenceActivity.Variables>
+                        <Variable x:TypeArguments="x:String" Name="Log_LogMessage_1" />
+                        <Variable x:TypeArguments="x:Double" Name="Log_Result_1" />
+                        <Variable x:TypeArguments="x:String" Name="Log_ResultString_1" />
+                        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="SoftwareInventory_Programs" />
+                        <Variable x:TypeArguments="x:String" Name="SoftwareInventory_ResultString" />
+                        <Variable x:TypeArguments="x:Double" Name="SoftwareInventory_Result" />
+                        <Variable x:TypeArguments="x:Object" Name="ForEachLoop_ItemValue" />
+                        <Variable x:TypeArguments="x:String" Name="ForEachLoop_ResultString" />
+                        <Variable x:TypeArguments="x:Double" Name="ForEachLoop_Result" />
+                      </p:SequenceActivity.Variables>
+                    </p:SequenceActivity>
+                  </p:CaseObject.ThenOption>
+                  <p:CaseObject.Value>
+                    <InArgument x:TypeArguments="x:Object">
+                      <p:ObjectLiteral Result="{x:Null}" Value="CONTAINS" />
+                    </InArgument>
+                  </p:CaseObject.Value>
+                </p:CaseObject>
+              </p:CaseSequenceActivity.Activities>
+              <p:CaseSequenceActivity.Variables>
+                <Variable x:TypeArguments="x:String" Name="CaseObject_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="CaseObject_Result" />
+                <Variable x:TypeArguments="x:String" Name="CaseObject_ResultString_1" />
+                <Variable x:TypeArguments="x:Double" Name="CaseObject_Result_1" />
+              </p:CaseSequenceActivity.Variables>
+            </p:CaseSequenceActivity>
+          </p:SwitchObject.CaseSequence>
+          <p:SwitchObject.DefaultOption>
+            <p:SequenceActivity DisplayName="Default" sap:VirtualizedContainerService.HintSize="408,359" Name="SequenceActivity">
+              <p:SequenceActivity.Activities>
+                <p:Log Message_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Log" sap:VirtualizedContainerService.HintSize="370,88" LogMessage="[Log_LogMessage_2]" Message="INCORRECT INPUT PARAMETER , ERROR" Message_DisplayArg="INCORRECT INPUT PARAMETER , ERROR" Message_Item="{x:Null}" Moniker="9e5f7e1c-9327-480e-a1d3-04930bf5db39" Result="[Log_Result_2]" ResultString="[Log_ResultString_2]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="Log" m_bTextLinkChange="False" />
+                <p:FailPolicy AssemblyName="PolicyExecutionEngine, Version=2.9.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Fail Policy" sap:VirtualizedContainerService.HintSize="370,81" Moniker="d893a538-25cb-45d1-88a0-b2a574d1656c" Result="[FailPolicy_Result]" ResultString="[FailPolicy_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="FailPolicy" m_bTextLinkChange="False" />
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <Variable x:TypeArguments="x:String" Name="Log_LogMessage_2" />
+                <Variable x:TypeArguments="x:Double" Name="Log_Result_2" />
+                <Variable x:TypeArguments="x:String" Name="Log_ResultString_2" />
+                <Variable x:TypeArguments="x:Double" Name="FailPolicy_Result" />
+                <Variable x:TypeArguments="x:String" Name="FailPolicy_ResultString" />
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:SwitchObject.DefaultOption>
+        </p:SwitchObject>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="SwitchObject_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="SwitchObject_Result" />
+        <Variable x:TypeArguments="x:String" Default="adobe acrobat reader dc" Name="AppName" />
+        <Variable x:TypeArguments="x:String" Default="CONTAINS" Name="partialorfull" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

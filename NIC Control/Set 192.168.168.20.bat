@@ -1,0 +1,1 @@
+netsh interface ip set address name="USB Ethernet" static 192.168.168.20  255.255.0.0 192.168.168.168

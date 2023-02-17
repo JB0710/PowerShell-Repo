@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+
+    <id>nextiva-one</id>
+    <version>0.0.1</version>
+   
+    <owners>WoodChip1650</owners>
+
+    <title>nextiva-one (Install)</title>
+    <authors>WoodChip1650</authors>
+
+    <projectUrl>https://kljwtech.net</projectUrl>
+
+    <iconUrl>http://kljwtech.net/images/nextiva.png</iconUrl>
+    
+    <tags>nextiva-one SPACE_SEPARATED</tags>
+    <summary>NextivaOne Install</summary>
+    <description>NextivaOne Install</description>
+    
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
